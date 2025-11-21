@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=7 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
 [ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
+[ext_resource type="Texture2D" uid="uid://bclk8ye1g2xvg" path="res://assety/poof jump.png" id="3_f1x1k"]
+[ext_resource type="AudioStream" uid="uid://ckj52lkpaaj72" path="res://assety/fart-loud.ogg" id="4_nhorx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhets"]
 size = Vector2(31, 64)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dhets"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = true
 
 [node name="Gracz" type="CharacterBody2D"]
 script = ExtResource("1_pprsy")
@@ -21,3 +29,20 @@ frame_progress = 0.9441545
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_dhets")
+position = Vector2(0, 26)
+emitting = false
+amount = 2
+texture = ExtResource("3_f1x1k")
+lifetime = 0.28
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 6.45
+anim_speed_min = 2.0
+anim_speed_max = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nhorx")
