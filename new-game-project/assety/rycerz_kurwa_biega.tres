@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://4ha77mkrepql"]
+
+[ext_resource type="Texture2D" uid="uid://ewrreabq8trp" path="res://assety/rycerz kurwa biega.png" id="1_j1mui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptyj0"]
+atlas = ExtResource("1_j1mui")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyogb"]
+atlas = ExtResource("1_j1mui")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1nso"]
+atlas = ExtResource("1_j1mui")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti61f"]
+atlas = ExtResource("1_j1mui")
+region = Rect2(96, 0, 32, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptyj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyogb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1nso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti61f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
