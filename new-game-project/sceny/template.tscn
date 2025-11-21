@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-[gd_scene load_steps=10 format=4 uid="uid://rdpqkn0r6n14"]
-
-[ext_resource type="TileSet" uid="uid://bdj4w32h2li68" path="res://assety/teren.tres" id="1_tymbh"]
-[ext_resource type="Script" uid="uid://db4sw8c71mry" path="res://sceny/animate barrier.gd" id="2_ei7s0"]
-[ext_resource type="Texture2D" uid="uid://bmpbyer7ty7ph" path="res://assety/barieraanim.png" id="2_y245x"]
-=======
 [gd_scene load_steps=5 format=4 uid="uid://rdpqkn0r6n14"]
 
 [ext_resource type="TileSet" uid="uid://bdj4w32h2li68" path="res://assety/teren.tres" id="1_tymbh"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="2_y245x"]
->>>>>>> 959fee4 (player update)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y245x"]
 distance = -7.0
