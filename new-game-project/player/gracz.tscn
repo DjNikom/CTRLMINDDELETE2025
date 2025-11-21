@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=7 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
+[ext_resource type="PackedScene" uid="uid://pnu8ivtsq20c" path="res://inne/HealthBar.tscn" id="2_novkp"]
 [ext_resource type="Texture2D" uid="uid://dwdmptraufh2d" path="res://assety/ziemia.png" id="2_pprsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhets"]
@@ -23,6 +24,8 @@ animations = [{
 
 [node name="Gracz" type="CharacterBody2D"]
 script = ExtResource("1_pprsy")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_novkp")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(48.5, -7)

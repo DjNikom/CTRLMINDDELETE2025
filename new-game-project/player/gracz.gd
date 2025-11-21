@@ -4,6 +4,10 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@export var max_health: int = 100
+var current_health: int = max_health
+
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,3 +27,20 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+signal health_changed(new_health)
+signal died
+
+func take_damage(amount: int):
+	current_health -= amount
+	if current_health < 0:
+		current_health = 0
+		emit_signal("health_changed", current_health)
+		if current_health == 0:
+			emit_signal("died")
+
+func heal(amount: int):
+	current_health += amount
+	if current_health > max_health:
+		current_health = max_health
+	emit_signal("health_changed", current_health)
