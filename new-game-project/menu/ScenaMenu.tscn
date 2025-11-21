@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://0xx8wfp6sgis"]
+
+[ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="1_4mixd"]
+
+[node name="ScenaMenu" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 1152.0
+offset_bottom = 324.0
+theme_override_fonts/normal_font = ExtResource("1_4mixd")
+theme_override_font_sizes/normal_font_size = 64
+text = "Tytuł gry tutaj"
+horizontal_alignment = 1
+vertical_alignment = 1
