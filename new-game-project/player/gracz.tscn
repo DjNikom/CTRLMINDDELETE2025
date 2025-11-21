@@ -1,3 +1,39 @@
-[gd_scene format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=6 format=3 uid="uid://deg1tljeykp3j"]
+
+[ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
+[ext_resource type="Texture2D" uid="uid://bn8awy442t7j0" path="res://icon.svg" id="2_novkp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1x1k"]
+atlas = ExtResource("2_novkp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhorx"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1x1k")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhets"]
+size = Vector2(128, 128)
 
 [node name="Gracz" type="CharacterBody2D"]
+script = ExtResource("1_pprsy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(49, -8)
+sprite_frames = SubResource("SpriteFrames_nhorx")
+animation = &"stand"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(49, -8)
+shape = SubResource("RectangleShape2D_dhets")
