@@ -5,6 +5,9 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var djumped = false
 
+var current_health = 100
+var max_health = 100
+
 func _ready() -> void:
 	$AnimatedSprite2D.frame = 1
 
