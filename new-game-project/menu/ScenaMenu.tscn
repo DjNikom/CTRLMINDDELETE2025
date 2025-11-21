@@ -1,8 +1,120 @@
-[gd_scene load_steps=4 format=3 uid="uid://0xx8wfp6sgis"]
+[gd_scene load_steps=10 format=3 uid="uid://0xx8wfp6sgis"]
 
 [ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="1_4mixd"]
 [ext_resource type="Script" uid="uid://cnqvwjb0xouwi" path="res://menu/scena_menu.gd" id="1_yart0"]
 [ext_resource type="PackedScene" uid="uid://cl30787seehq2" path="res://menu/menu_item.tscn" id="3_764qr"]
+[ext_resource type="Texture2D" uid="uid://x7ljshsdq0jl" path="res://menu/logo.png" id="4_78fmy"]
+[ext_resource type="AudioStream" uid="uid://ces3u5eobqp7y" path="res://menu/tytul_intro.ogg" id="4_u0hy4"]
+[ext_resource type="AudioStream" uid="uid://bp30dmorvfcty" path="res://menu/tytul_loop.ogg" id="5_78fmy"]
+
+[sub_resource type="Animation" id="Animation_u0hy4"]
+resource_name = "Intro"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:modulate:a")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 13, 15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate:a")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.008333206, 1.0083332, 3.0083332, 4.008333, 6.008333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Prezentuje:modulate:a")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7, 9, 10, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:gotowy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_78fmy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Logo:modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:gotowy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bjw18"]
+_data = {
+&"Intro": SubResource("Animation_u0hy4"),
+&"RESET": SubResource("Animation_78fmy")
+}
 
 [node name="ScenaMenu" type="Node2D"]
 script = ExtResource("1_yart0")
@@ -12,19 +124,49 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Menu" type="Node2D" parent="."]
+
+[node name="TytulTutaj" type="RichTextLabel" parent="Menu"]
 offset_right = 1152.0
 offset_bottom = 324.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_4mixd")
 theme_override_font_sizes/normal_font_size = 64
 text = "Tytuł gry tutaj"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ItemGraj" parent="." instance=ExtResource("3_764qr")]
+[node name="ItemGraj" parent="Menu" instance=ExtResource("3_764qr")]
 position = Vector2(226, 470)
 tekst = "Graj"
 
-[node name="ItemWyjdz" parent="." instance=ExtResource("3_764qr")]
+[node name="ItemWyjdz" parent="Menu" instance=ExtResource("3_764qr")]
 position = Vector2(780, 470)
 tekst = "Wyjdz"
+
+[node name="Logo" type="Sprite2D" parent="."]
+texture = ExtResource("4_78fmy")
+offset = Vector2(576, 324)
+
+[node name="Prezentuje" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_4mixd")
+theme_override_font_sizes/font_size = 128
+text = "Prezentuje"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bjw18")
+}
+
+[node name="MuzykaIntro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_u0hy4")
+autoplay = true
+
+[node name="MuzykaPetla" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_78fmy")
+parameters/looping = true
