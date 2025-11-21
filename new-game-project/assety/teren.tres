@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bdj4w32h2li68"]
+
+[ext_resource type="Texture2D" uid="uid://c702run410yk0" path="res://assety/trawa.png" id="1_3xvya"]
+[ext_resource type="Texture2D" uid="uid://dwdmptraufh2d" path="res://assety/ziemia.png" id="2_k5qxs"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12ia2"]
+texture = ExtResource("1_3xvya")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rgba"]
+texture = ExtResource("2_k5qxs")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_12ia2")
+sources/1 = SubResource("TileSetAtlasSource_8rgba")
