@@ -18,10 +18,9 @@ var pocisk = preload("res://Oponenci/pocisk.tscn")
 
 func _ready() -> void:
 	ifGraczIn = false
-	atakDelay = ATAKDELAY
-	predkosc = PREDKOSC
+	atakDelay = 0
 	atak = ATAK
-	melatak = MELATAK
+	melatak = 0
 	hp = HP
 	
 	
