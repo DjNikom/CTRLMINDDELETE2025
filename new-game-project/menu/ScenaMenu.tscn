@@ -126,9 +126,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" parent="."]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Menu"]
+[node name="TytulTutaj" type="RichTextLabel" parent="Menu"]
 offset_right = 1152.0
 offset_bottom = 324.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_4mixd")
 theme_override_font_sizes/normal_font_size = 64
 text = "Tytuł gry tutaj"
