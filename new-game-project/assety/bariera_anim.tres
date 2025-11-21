@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://vjkocbqgpl6g"]
+
+[ext_resource type="Texture2D" uid="uid://bmpbyer7ty7ph" path="res://assety/barieraanim.png" id="1_ieukx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khcxm"]
+atlas = ExtResource("1_ieukx")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jq7s"]
+atlas = ExtResource("1_ieukx")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc314"]
+atlas = ExtResource("1_ieukx")
+region = Rect2(384, 0, 192, 192)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khcxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jq7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc314")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]

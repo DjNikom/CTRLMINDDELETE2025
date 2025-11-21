@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://d3ckldwfsmwc"]
+
+[ext_resource type="Texture2D" uid="uid://bjchtaubrmgjy" path="res://assety/deski.png" id="1_mg258"]
+[ext_resource type="Texture2D" uid="uid://ceyvdgtekihf5" path="res://assety/szklo.png" id="2_3vv41"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sdyuf"]
+texture = ExtResource("1_mg258")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mjfn"]
+texture = ExtResource("2_3vv41")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_sdyuf")
+sources/1 = SubResource("TileSetAtlasSource_7mjfn")

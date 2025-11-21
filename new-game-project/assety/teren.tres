@@ -1,7 +1,10 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://chslyd8yits5j"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://chslyd8yits5j"]
 
 [ext_resource type="Texture2D" uid="uid://c702run410yk0" path="res://assety/trawa.png" id="1_3xvya"]
 [ext_resource type="Texture2D" uid="uid://dwdmptraufh2d" path="res://assety/ziemia.png" id="2_k5qxs"]
+[ext_resource type="Texture2D" uid="uid://c0g2li3jslwjj" path="res://assety/kamien1.png" id="3_8rgba"]
+[ext_resource type="Texture2D" uid="uid://b50qimjic2sqj" path="res://assety/kamien2.png" id="4_0dusu"]
+[ext_resource type="Texture2D" uid="uid://vq6466ekiall" path="res://assety/kamien3.png" id="5_6o4x3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12ia2"]
 texture = ExtResource("1_3xvya")
@@ -13,7 +16,25 @@ texture = ExtResource("2_k5qxs")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkwcb"]
+texture = ExtResource("3_8rgba")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xh35h"]
+texture = ExtResource("4_0dusu")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nuax4"]
+texture = ExtResource("5_6o4x3")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_12ia2")
 sources/1 = SubResource("TileSetAtlasSource_8rgba")
+sources/2 = SubResource("TileSetAtlasSource_lkwcb")
+sources/3 = SubResource("TileSetAtlasSource_xh35h")
+sources/4 = SubResource("TileSetAtlasSource_nuax4")
