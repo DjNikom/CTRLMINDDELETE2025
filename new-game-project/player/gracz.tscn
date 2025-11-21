@@ -34,3 +34,5 @@ sprite_frames = SubResource("SpriteFrames_nhorx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(50, -14)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
