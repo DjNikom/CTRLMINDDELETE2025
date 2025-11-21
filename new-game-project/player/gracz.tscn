@@ -1,36 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=4 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
-[ext_resource type="Texture2D" uid="uid://dwdmptraufh2d" path="res://assety/ziemia.png" id="2_pprsy"]
+[ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhets"]
-size = Vector2(31, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_novkp"]
-atlas = ExtResource("2_pprsy")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nhorx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_novkp")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+size = Vector2(31, 64)
 
 [node name="Gracz" type="CharacterBody2D"]
 script = ExtResource("1_pprsy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(48.5, -7)
 shape = SubResource("RectangleShape2D_dhets")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(49, -8)
-sprite_frames = SubResource("SpriteFrames_nhorx")
+sprite_frames = ExtResource("2_pprsy")
+frame_progress = 0.9441545
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(50, -14)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
