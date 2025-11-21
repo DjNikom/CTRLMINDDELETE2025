@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bdj4w32h2li68"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://chslyd8yits5j"]
 
 [ext_resource type="Texture2D" uid="uid://c702run410yk0" path="res://assety/trawa.png" id="1_3xvya"]
 [ext_resource type="Texture2D" uid="uid://dwdmptraufh2d" path="res://assety/ziemia.png" id="2_k5qxs"]

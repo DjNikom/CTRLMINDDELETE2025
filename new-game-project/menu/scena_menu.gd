@@ -4,7 +4,7 @@ var buttonGraj: Button = null
 var buttonWyjdz: Button = null
 
 func graj():
-	pass
+	get_tree().change_scene_to_file("res://sceny/template.tscn")
 
 func wyjdz():
 	get_tree().quit()
