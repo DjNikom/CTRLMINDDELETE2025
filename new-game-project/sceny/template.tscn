@@ -1,13 +1,43 @@
-[gd_scene load_steps=4 format=4 uid="uid://rdpqkn0r6n14"]
+[gd_scene load_steps=10 format=4 uid="uid://rdpqkn0r6n14"]
 
 [ext_resource type="TileSet" uid="uid://bdj4w32h2li68" path="res://assety/teren.tres" id="1_tymbh"]
+[ext_resource type="Script" uid="uid://db4sw8c71mry" path="res://sceny/animate barrier.gd" id="2_ei7s0"]
+[ext_resource type="Texture2D" uid="uid://bmpbyer7ty7ph" path="res://assety/barieraanim.png" id="2_y245x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y245x"]
 distance = -7.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ei7s0"]
 normal = Vector2(1, 0)
-distance = -465.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei7s0"]
+atlas = ExtResource("2_y245x")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8shlj"]
+atlas = ExtResource("2_y245x")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isexu"]
+atlas = ExtResource("2_y245x")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oujix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei7s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8shlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isexu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="Template" type="Node2D"]
 
@@ -23,9 +53,20 @@ tile_map_data = PackedByteArray("AAD8/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAA
 tile_set = ExtResource("1_tymbh")
 
 [node name="Bariera1" type="StaticBody2D" parent="."]
+position = Vector2(-305, -97)
+script = ExtResource("2_ei7s0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bariera1"]
-position = Vector2(0, -107)
 shape = SubResource("WorldBoundaryShape2D_ei7s0")
 
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Bariera1"]
+position = Vector2(2, -382)
+sprite_frames = SubResource("SpriteFrames_oujix")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Bariera1"]
+position = Vector2(1, -191)
+sprite_frames = SubResource("SpriteFrames_oujix")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bariera1"]
+sprite_frames = SubResource("SpriteFrames_oujix")
+frame_progress = 0.3562953
