@@ -8,7 +8,7 @@ var funkcje: Array[Callable] = [
 ]
 
 func graj():
-	get_tree().change_scene_to_file("res://sceny/template.tscn")
+	get_tree().change_scene_to_file("res://test/testowa.tscn")
 
 func wyjdz():
 	get_tree().quit()
