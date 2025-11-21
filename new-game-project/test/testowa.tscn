@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://dny7iql35xrpi"]
+[gd_scene load_steps=5 format=4 uid="uid://dny7iql35xrpi"]
 
-[ext_resource type="TileSet" path="res://assety/teren.tres" id="1_jold6"]
+[ext_resource type="TileSet" uid="uid://bdj4w32h2li68" path="res://assety/teren.tres" id="1_jold6"]
+[ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="2_bgy25"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y245x"]
 distance = -7.0
@@ -29,3 +30,5 @@ position = Vector2(0, -107)
 shape = SubResource("WorldBoundaryShape2D_ei7s0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bariera1"]
+
+[node name="Gracz" parent="." instance=ExtResource("2_bgy25")]
