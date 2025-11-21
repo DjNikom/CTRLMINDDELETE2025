@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4l46ivc5narp"]
+
+[ext_resource type="Script" uid="uid://cjdbqwnbwfodg" path="res://pocisk.gd" id="1_5ms30"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xk53w"]
+radius = 4.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+mass = 0.1
+gravity_scale = 0.1
+script = ExtResource("1_5ms30")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xk53w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
