@@ -43,6 +43,11 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.frame = 1
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	if velocity.y < 0:
+		self.collision_mask &= ~2
+	else:
+		self.collision_mask |= 2
+
 	move_and_slide()
 	
 signal health_changed(new_health)
