@@ -9,7 +9,6 @@ var atakDelay
 const ATAKDELAY = 5
 var predkosc
 const PREDKOSC = 5
-var gracz
 
 @onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
 
