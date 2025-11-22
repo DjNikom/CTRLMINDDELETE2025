@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" load_steps=6 format=3 uid="uid://dke6mgb6ci7u5"]
 
 [ext_resource type="Texture2D" uid="uid://cygfeginib4kc" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="1_ve26n"]
+
 [sub_resource type="TileMapPattern" id="TileMapPattern_ve26n"]
 tile_data = PackedInt32Array(0, 262144, 7, 1, 327680, 7, 2, 327680, 7, 3, 393216, 7)
 
@@ -9,6 +10,7 @@ tile_data = PackedInt32Array(0, 262144, 7, 1, 327680, 7, 2, 393216, 7)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_6smjg"]
 tile_data = PackedInt32Array(0, 262144, 7, 1, 327680, 7, 2, 327680, 7, 3, 327680, 7, 4, 393216, 7)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w12wo"]
 texture = ExtResource("1_ve26n")
 texture_region_size = Vector2i(32, 32)

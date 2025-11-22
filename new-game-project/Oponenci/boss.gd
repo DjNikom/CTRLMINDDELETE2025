@@ -39,7 +39,7 @@ func _process(_delta: float) -> void:
 		if ifGraczIn:
 			gracz.dealDamage(atak)
 		else: 
-			atak_masowy()	
+		atak_masowy()	
 		atakDelay = ATAKDELAY
 	
 	
