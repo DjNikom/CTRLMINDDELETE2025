@@ -1,21 +1,22 @@
+class_name OppDyst
 extends Node2D
 
 var ifGraczIn
 var hp
-const HP = 100
+const HP = 1000
 var melatak
-const MELATAK = 25
+const MELATAK = 15
 var atak
-const ATAK = 20
+const ATAK = 25
 var atakDelay
-const ATAKDELAY = 15
-var dystansDelay
-const DYSTANSDELAY = 3
+const ATAKDELAY = 4
 var predkosc
-const PREDKOSC = 5
-var pocisk = preload("res://Oponenci/pocisk.tscn")
-
-@onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
+const PREDKOSC = 20
+const NMBROFBULLETS = 6
+const CZASMIEDZYBULLETS = 0.5
+var gracz
+var pocisk = preload("res://Oponenci/BossPocisk.tscn")
+var x
 
 func _ready() -> void:
 	ifGraczIn = false
@@ -23,16 +24,13 @@ func _ready() -> void:
 	atak = ATAK
 	melatak = MELATAK
 	hp = HP
-	dystansDelay = 0
-	
+	x = 0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz: 
 		ifGraczIn = true
 		gracz = body
-		
-	
-	
+
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Gracz:
 		ifGraczIn = false
@@ -41,21 +39,23 @@ func _process(_delta: float) -> void:
 	if atakDelay <= 0:
 		if ifGraczIn:
 			gracz.dealDamage(atak)
-			atakDelay = ATAKDELAY
-	if dystansDelay <= 0:
-		if gracz.position.distance_to(position) > 512: return
-		instantiate_bullet()
-		dystansDelay = DYSTANSDELAY
+		else: 
+			atak_masowy()	
+		atakDelay = ATAKDELAY
 	
 	
 func _physics_process(delta: float) -> void:
 	if atakDelay > 0:
 		atakDelay -= delta
 	
-	if dystansDelay > 0:
-		dystansDelay -= delta
-		
-		
+
 func instantiate_bullet():
 	var instance = pocisk.instantiate()
 	add_child(instance)
+	
+func atak_masowy():
+	while x < NMBROFBULLETS:
+		instantiate_bullet()
+		x+=1
+		await get_tree().create_timer(CZASMIEDZYBULLETS).timeout
+	x = 0
