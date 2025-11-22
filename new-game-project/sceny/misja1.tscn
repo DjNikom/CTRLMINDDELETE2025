@@ -61,10 +61,16 @@ collision_enabled = false
 position = Vector2(0, 160)
 
 [node name="Oponent_dystans" parent="." instance=ExtResource("7_y6i1i")]
-position = Vector2(2981, -206)
+position = Vector2(2981, -175)
 
 [node name="Oponent_wrecz" parent="." instance=ExtResource("8_1p7er")]
-position = Vector2(4090, -194)
+position = Vector2(4090, -190)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_hxhq3")]
-position = Vector2(6275, -132)
+position = Vector2(6180, -131)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("9_hxhq3")]
+position = Vector2(6477, -132)
+
+[node name="Oponent_dystans2" parent="." instance=ExtResource("7_y6i1i")]
+position = Vector2(6329, -112)
