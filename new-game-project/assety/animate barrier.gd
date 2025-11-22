@@ -13,6 +13,8 @@ func wszedl(kto: Node2D):
 func _ready() -> void:
 	self.connect("body_entered", wszedl)
 	
+	if scale.x == -1: flip = true
+	
 	$AnimatedSprite2D.play("default") # Replace with function body.
 	$AnimatedSprite2D2.play("default")
 	$AnimatedSprite2D3.play("default")
