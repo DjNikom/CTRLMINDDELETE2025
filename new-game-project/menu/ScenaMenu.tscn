@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://0xx8wfp6sgis"]
+[gd_scene load_steps=12 format=3 uid="uid://0xx8wfp6sgis"]
 
 [ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="1_4mixd"]
 [ext_resource type="Script" uid="uid://cnqvwjb0xouwi" path="res://menu/scena_menu.gd" id="1_yart0"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://x7ljshsdq0jl" path="res://menu/logo.png" id="4_78fmy"]
 [ext_resource type="AudioStream" uid="uid://ces3u5eobqp7y" path="res://menu/tytul_intro.ogg" id="4_u0hy4"]
 [ext_resource type="AudioStream" uid="uid://bp30dmorvfcty" path="res://menu/tytul_loop.ogg" id="5_78fmy"]
+[ext_resource type="AudioStream" uid="uid://d1vedxyg6gxi2" path="res://menu/snd1.ogg" id="5_totii"]
+[ext_resource type="AudioStream" uid="uid://crftiu0akmsid" path="res://menu/snd2.ogg" id="6_qputn"]
 
 [sub_resource type="Animation" id="Animation_u0hy4"]
 resource_name = "Intro"
@@ -162,6 +164,14 @@ vertical_alignment = 1
 libraries = {
 &"": SubResource("AnimationLibrary_bjw18")
 }
+
+[node name="Dzwiek1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_totii")
+parameters/looping = false
+
+[node name="Dzwiek2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qputn")
+parameters/looping = false
 
 [node name="MuzykaIntro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_u0hy4")
