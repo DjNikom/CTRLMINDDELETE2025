@@ -1,16 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cswovm0b2ah4t"]
+[gd_scene load_steps=5 format=3 uid="uid://cswovm0b2ah4t"]
 
 [ext_resource type="Script" uid="uid://dnv4y03lukl3u" path="res://Oponenci/oponent_wrecz.gd" id="1_wrmic"]
+[ext_resource type="Texture2D" uid="uid://cygn2bncx811y" path="res://assety/mojaj.png" id="2_55115"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4iwtl"]
 size = Vector2(42, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhl4w"]
 
-[node name="Oponent_wrecz" type="Node2D"]
+[node name="Oponent_wrecz" type="Node2D" groups=["oponenci"]]
 script = ExtResource("1_wrmic")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -16)
+texture = ExtResource("2_55115")
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false

@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://pnu8ivtsq20c"]
+[gd_scene load_steps=3 format=3 uid="uid://pnu8ivtsq20c"]
 
 [ext_resource type="Script" uid="uid://d3ycga003wqvl" path="res://inne/HealthBar.gd" id="1_g6b8u"]
+[ext_resource type="Theme" uid="uid://bue88crbgo2p5" path="res://assety/dialoguetheme.tres" id="1_l4g7t"]
 
-[node name="HealthBar" type="Node2D"]
+[node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_right = 4.0
-offset_bottom = 27.0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 253.0
+offset_bottom = 39.0
+theme = ExtResource("1_l4g7t")
+value = 100.0
 script = ExtResource("1_g6b8u")

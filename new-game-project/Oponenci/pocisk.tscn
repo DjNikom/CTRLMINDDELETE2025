@@ -11,6 +11,8 @@ radius = 15.0
 height = 66.0
 
 [node name="pocisk" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
 mass = 0.1
 gravity_scale = 0.0
 script = ExtResource("1_5ms30")
@@ -25,6 +27,7 @@ shape = SubResource("CircleShape2D_xk53w")
 debug_color = Color(0.56358457, 0, 0.07934862, 0.41960785)
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

@@ -4,6 +4,8 @@ extends Node2D
 
 var menuItems: Array[MenuItem] = []
 var animator: AnimationPlayer = null
+var dzwiek1: AudioStreamPlayer = null
+var dzwiek2: AudioStreamPlayer = null
 var muzykaIntro: AudioStreamPlayer = null
 var muzykaPetla: AudioStreamPlayer = null
 
@@ -13,10 +15,10 @@ var funkcje: Array[Callable] = [
 ]
 
 func graj():
-	MenedzerScen.przejscie("res://sceny/mapa_start.tscn")
+	MenedzerScen.przejscie("res://sceny/misja1.tscn")
 
 func wyjdz():
-	get_tree().quit()
+	MenedzerScen.wyjdz()
 
 func muzyka_zapetlij():
 	muzykaPetla.play()
@@ -28,6 +30,8 @@ func _ready() -> void:
 	
 	animator = get_node("Animator")
 	
+	dzwiek1 = get_node("Dzwiek1")
+	dzwiek2 = get_node("Dzwiek2")
 	muzykaIntro = get_node("MuzykaIntro")
 	muzykaPetla = get_node("MuzykaPetla")
 	
@@ -42,9 +46,11 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_left") || event.is_action_pressed("ui_right"):
 		pozycja += 1
 		pozycja %= 2
+		dzwiek1.play()
 	
 	if event.is_action_pressed("ui_accept"):
 		funkcje[pozycja].call()
+		dzwiek2.play()
 		
 	for item in menuItems:
 		item.wybrany = false
