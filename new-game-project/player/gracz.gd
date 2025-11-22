@@ -14,6 +14,7 @@ var dir = 1
 var current_health = 100
 var max_health = 100
 
+var iframes = 0
 var puncc = 0
 
 func _ready() -> void:
@@ -32,6 +33,10 @@ func gameover():
 
 func _physics_process(delta: float) -> void:
 	if pauza: return
+	
+	if iframes > 0:
+		$AnimatedSprite2D.visible = iframes & 1
+		iframes -= 1
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -64,8 +69,8 @@ func _physics_process(delta: float) -> void:
 			for o in oponenci:
 				if !o is Node2D: continue
 				var oponent: Node2D = o
-				if oponent.position.distance_to(self.position) > 128: continue
-				oponent.queue_free()
+				if oponent.position.distance_to(self.position) > 96: continue
+				oponent.damage()
 
 		if Input.is_action_just_pressed("ui_dash")&&dashCooldown<=0:
 			velocity.x = dir * DASHSPEED
@@ -114,13 +119,15 @@ signal health_changed(new_health)
 signal died
 
 func take_damage(amount: int):
+	if iframes > 0: return
 	current_health -= amount
 	bezwladny = 30
 	velocity = Vector2(100, -200)
 	$AnimatedSprite2D.play("fall")
 	
+	iframes = 120
+	
 	emit_signal("health_changed", current_health)
-	print(current_health)
 	if current_health <= 0:
 		gameover()
 		emit_signal("died")

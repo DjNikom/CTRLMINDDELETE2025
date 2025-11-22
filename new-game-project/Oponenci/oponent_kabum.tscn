@@ -1,28 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://d02xhyena2xmn"]
+[gd_scene load_steps=4 format=3 uid="uid://bsj5qh1o4d2d0"]
 
 [ext_resource type="Script" uid="uid://c31g6gmjtlrbc" path="res://Oponenci/oponent_kabum.gd" id="1_qkpqu"]
+[ext_resource type="Texture2D" uid="uid://6jcha33t2oho" path="res://assety/serious_sam_kamikaze_scream.png" id="2_ukftg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4iwtl"]
-size = Vector2(105, 110)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ukftg"]
+radius = 13.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhl4w"]
-
-[node name="Oponent_kabum" type="Node2D"]
+[node name="Oponent_kabum" type="Node2D" groups=["oponenci"]]
 script = ExtResource("1_qkpqu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="SeriousSamKamikazeScream" type="Sprite2D" parent="."]
+position = Vector2(3, -4)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ukftg")
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_4iwtl")
+shape = SubResource("CircleShape2D_ukftg")
 debug_color = Color(0.9920365, 0, 0.26378384, 0.41960785)
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("RectangleShape2D_bhl4w")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

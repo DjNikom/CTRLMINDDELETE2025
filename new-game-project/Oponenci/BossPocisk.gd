@@ -31,5 +31,5 @@ func destroy_after_time(delta: float):
 		
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz:
-		body.dealDamage(atak)
+		body.take_damage(atak)
 	queue_free()

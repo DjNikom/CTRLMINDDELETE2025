@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+[gd_scene load_steps=11 format=4 uid="uid://jkutel78f8u4"]
+=======
 [gd_scene load_steps=13 format=4 uid="uid://f276qfl5ln0t"]
+>>>>>>> 2fe260ad9982eeca5079e6eefec8474d59687e8e
+
 [ext_resource type="Texture2D" uid="uid://ce3n8wcs201tp" path="res://assety/niebo.png" id="1_1p7er"]
 [ext_resource type="TileSet" uid="uid://dke6mgb6ci7u5" path="res://assety/teren_misja1.tres" id="2_y6i1i"]
 [ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_bx54q"]
@@ -9,8 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="8_hxhq3"]
 [ext_resource type="PackedScene" uid="uid://dipnlo560hkc8" path="res://Oponenci/stinky.tscn" id="9_hxhq3"]
 [ext_resource type="FontFile" uid="uid://dssw4rhmx0p2s" path="res://menu/PerfectDOSVGA437.ttf" id="10_bndcm"]
+<<<<<<< HEAD
+=======
 [ext_resource type="PackedScene" uid="uid://bsj5qh1o4d2d0" path="res://Oponenci/oponent_kabum.tscn" id="11_poxqa"]
 [ext_resource type="PackedScene" uid="uid://bshslj2rytt0r" path="res://inne/medkit.tscn" id="12_g5c7q"]
+>>>>>>> 2fe260ad9982eeca5079e6eefec8474d59687e8e
+
 [node name="Misja1" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
