@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://75abvg3pnder"]
+[gd_scene load_steps=8 format=4 uid="uid://gcrlndjytaha"]
 
-[ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_y6ug6"]
-[ext_resource type="Texture2D" uid="uid://c251uoiikiabf" path="res://assety/IMG_4789(1).png" id="2_p5kma"]
+[ext_resource type="Texture2D" uid="uid://ce3n8wcs201tp" path="res://assety/niebo.png" id="1_y6ug6"]
+[ext_resource type="Texture2D" uid="uid://dkhe1xbrv6u18" path="res://assety/IMG_4789(1).png" id="2_p5kma"]
 [ext_resource type="TileSet" uid="uid://dssy0ii5l38u3" path="res://assety/teren.tres" id="2_y6ug6"]
 [ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_p5kma"]
 [ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="4_dp7ak"]
