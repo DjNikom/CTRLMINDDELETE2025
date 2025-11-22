@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://dny7iql35xrpi"]
 
-[ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="1_jold6"]
-[ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_x51p7"]
+[ext_resource type="TileSet" uid="uid://dssy0ii5l38u3" path="res://assety/teren.tres" id="1_jold6"]
+[ext_resource type="Texture2D" uid="uid://ce3n8wcs201tp" path="res://assety/niebo.png" id="1_x51p7"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="2_vanjc"]
 [ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="3_5qd04"]
 [ext_resource type="PackedScene" uid="uid://dc48emqm5xyko" path="res://Oponenci/boss.tscn" id="5_x51p7"]
