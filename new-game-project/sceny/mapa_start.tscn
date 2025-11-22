@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=4 uid="uid://b5ydou1ehm7y1"]
 
-[ext_resource type="TileSet" uid="uid://cokedl0a5b5ht" path="res://assety/budulce.tres" id="1_n2pwe"]
+[ext_resource type="TileSet" uid="uid://6cpd568aohhk" path="res://assety/budulce.tres" id="1_n2pwe"]
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_ocw1x"]
 [ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="1_q2dks"]
 [ext_resource type="Script" uid="uid://dimym7k7tvtq7" path="res://sceny/dekor.gd" id="3_jnc1k"]
 [ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_ln5bh"]
-[ext_resource type="SpriteFrames" uid="uid://dfn2bft0kc7do" path="res://assety/fire.tres" id="4_dg0qr"]
+[ext_resource type="SpriteFrames" uid="uid://d2h4t3gss4ecd" path="res://assety/fire.tres" id="4_dg0qr"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="5_dg0qr"]
 [ext_resource type="Texture2D" uid="uid://7antvv60ngwb" path="res://assety/Untitled.png" id="6_6uva7"]
 [ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="7_fn1ym"]
