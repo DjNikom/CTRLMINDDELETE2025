@@ -13,16 +13,16 @@ var dystansDelay
 const DYSTANSDELAY = 10
 var predkosc
 const PREDKOSC = 5
-var graczhp
+var graczhp = 0
 var pocisk = preload("res://Oponenci/pocisk.tscn")
 
 func _ready() -> void:
 	ifGraczIn = false
 	atakDelay = 0
 	atak = ATAK
-	melatak = 0
+	melatak = MELATAK
 	hp = HP
-	
+	dystansDelay = 0
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -41,6 +41,8 @@ func _process(_delta: float) -> void:
 			atakDelay = ATAKDELAY
 	if dystansDelay <= 0:
 		instantiate_bullet()
+		print("EloElo320")
+		dystansDelay = DYSTANSDELAY
 	
 	
 func _physics_process(delta: float) -> void:

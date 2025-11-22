@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
-[ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
+[ext_resource type="SpriteFrames" uid="uid://by1p1ojdx6m6j" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhets"]
 size = Vector2(31, 64)

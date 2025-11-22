@@ -40,6 +40,9 @@ shape = SubResource("RectangleShape2D_7q4es")
 position = Vector2(270, -73)
 shape = SubResource("RectangleShape2D_vanjc")
 
+[node name="Gracz" parent="Ziemia" instance=ExtResource("2_vanjc")]
+position = Vector2(-23, -295)
+
 [node name="Bariera1" type="StaticBody2D" parent="."]
 position = Vector2(-446, -95)
 script = ExtResource("2_7q4es")
@@ -66,8 +69,5 @@ sprite_frames = ExtResource("3_vanjc")
 position = Vector2(0, -763)
 sprite_frames = ExtResource("3_vanjc")
 
-[node name="Gracz" parent="." instance=ExtResource("2_vanjc")]
-position = Vector2(-21, -302)
-
-[node name="Oponent_dystans" parent="." instance=ExtResource("5_x51p7")]
-position = Vector2(272, -161)
+[node name="Oponent_dystans" parent="Bariera1" instance=ExtResource("5_x51p7")]
+position = Vector2(718, -66)
