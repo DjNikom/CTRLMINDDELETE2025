@@ -20,10 +20,16 @@ config/icon="uid://cwy7jqc81xnrr"
 [autoload]
 
 MenedzerScen="*res://MenedzerScen.gd"
+Dialog="*res://dialog.gd"
 
 [display]
 
 window/stretch/scale_mode="integer"
+
+[global_group]
+
+Gracz=""
+oponenci=""
 
 [input]
 

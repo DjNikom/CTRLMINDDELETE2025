@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://dny7iql35xrpi"]
+[gd_scene load_steps=10 format=4 uid="uid://dny7iql35xrpi"]
 
 [ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="1_jold6"]
-[ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_x51p7"]
+[ext_resource type="Script" path="res://assety/animate barrier.gd" id="2_7q4es"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="2_vanjc"]
-[ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="3_5qd04"]
+[ext_resource type="SpriteFrames" uid="uid://tafmdub0nd12" path="res://assety/bariera_anim.tres" id="3_vanjc"]
 [ext_resource type="PackedScene" uid="uid://bb85un1lpvuei" path="res://Oponenci/oponent_dystans.tscn" id="5_x51p7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y245x"]
@@ -15,17 +15,11 @@ size = Vector2(224, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vanjc"]
 size = Vector2(96, 96)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ei7s0"]
+normal = Vector2(1, 0)
+distance = 88.0
+
 [node name="Template" type="Node2D"]
-
-[node name="Parallax2D" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 0.5)
-repeat_size = Vector2(1024, 0)
-autoscroll = Vector2(-0.005, 0)
-repeat_times = 231
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(0, -205)
-texture = ExtResource("1_x51p7")
 
 [node name="Ziemia" type="StaticBody2D" parent="."]
 position = Vector2(2, -7)
@@ -46,11 +40,34 @@ shape = SubResource("RectangleShape2D_7q4es")
 position = Vector2(270, -73)
 shape = SubResource("RectangleShape2D_vanjc")
 
-[node name="Bariera" parent="." instance=ExtResource("3_5qd04")]
+[node name="Gracz" parent="Ziemia" instance=ExtResource("2_vanjc")]
+position = Vector2(-23, -295)
+
+[node name="Bariera1" type="StaticBody2D" parent="."]
 position = Vector2(-446, -95)
+script = ExtResource("2_7q4es")
 
-[node name="Oponent_dystans" parent="." instance=ExtResource("5_x51p7")]
-position = Vector2(272, -161)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bariera1"]
+shape = SubResource("WorldBoundaryShape2D_ei7s0")
 
-[node name="Gracz" parent="." instance=ExtResource("2_vanjc")]
-position = Vector2(25, -164)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bariera1"]
+sprite_frames = ExtResource("3_vanjc")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Bariera1"]
+position = Vector2(0, -192)
+sprite_frames = ExtResource("3_vanjc")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Bariera1"]
+position = Vector2(0, -381)
+sprite_frames = ExtResource("3_vanjc")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Bariera1"]
+position = Vector2(0, -571)
+sprite_frames = ExtResource("3_vanjc")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Bariera1"]
+position = Vector2(0, -763)
+sprite_frames = ExtResource("3_vanjc")
+
+[node name="Oponent_dystans" parent="Bariera1" instance=ExtResource("5_x51p7")]
+position = Vector2(718, -66)
