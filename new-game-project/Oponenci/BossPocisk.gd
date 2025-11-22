@@ -1,7 +1,7 @@
 extends RigidBody2D
 var atak
 var pozycjaGracza = Vector2()
-const SPEED = 500
+const SPEED = 150
 var pozycja = Vector2()
 var predkosc = Vector2()
 var zwrot = Vector2()
@@ -10,14 +10,15 @@ var czas
 
 func _ready() -> void:
 	czas = 7.5
-	pozycja = self.global_position
 	atak = get_parent().atak
-	pozycjaGracza = gracz.get_pozycja()
-	zwrot = (pozycjaGracza - pozycja).normalized()
-	self.rotation = zwrot.angle() + PI
+	
 	
 
 func _physics_process(delta: float) -> void:
+	pozycja = self.global_position
+	pozycjaGracza = gracz.get_pozycja()
+	zwrot = (pozycjaGracza - pozycja).normalized()
+	self.rotation = zwrot.angle() + PI
 	predkosc = zwrot * SPEED * delta
 	predkosc = move_and_collide(predkosc)
 	destroy_after_time(delta)
@@ -30,6 +31,5 @@ func destroy_after_time(delta: float):
 		
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz:
-		body.dealDamage(atak)
+		body.take_damage(atak)
 	queue_free()
-	

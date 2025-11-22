@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmvv0sm13mg3s"]
+
+[ext_resource type="Script" path="res://Oponenci/boss.gd" id="1_r88yc"]
+[ext_resource type="Texture2D" uid="uid://c7pfxpioqslku" path="res://assety/threeformsPJ21.png" id="2_m0i53"]
+[ext_resource type="Texture2D" uid="uid://d2gx3knc4xgvd" path="res://assety/threeformsPJ22.png" id="3_wsjam"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ms4s"]
+animations = [{
+"frames": [{
+"duration": 2.01,
+"texture": ExtResource("2_m0i53")
+}, {
+"duration": 1.41,
+"texture": ExtResource("3_wsjam")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4iwtl"]
+size = Vector2(80, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhl4w"]
+size = Vector2(27, 27)
+
+[node name="Boss" type="Node2D"]
+script = ExtResource("1_r88yc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8ms4s")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_4iwtl")
+debug_color = Color(0.9920365, 0, 0.26378384, 0.41960785)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_bhl4w")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

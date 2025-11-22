@@ -8,6 +8,8 @@ const ATAK = 25
 var predkosc
 const PREDKOSC = 5
 
+@onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
+
 func _ready() -> void:
 	ifGraczIn = false
 	

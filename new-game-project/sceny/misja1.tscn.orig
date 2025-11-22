@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://jkutel78f8u4"]
 
-[ext_resource type="Texture2D" uid="uid://ce3n8wcs201tp" path="res://assety/niebo.png" id="1_1p7er"]
+[ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_1p7er"]
 [ext_resource type="TileSet" uid="uid://dke6mgb6ci7u5" path="res://assety/teren_misja1.tres" id="2_y6i1i"]
 [ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_bx54q"]
 [ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="4_qnoqu"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cswovm0b2ah4t" path="res://Oponenci/oponent_wrecz.tscn" id="8_1p7er"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="8_hxhq3"]
 [ext_resource type="PackedScene" uid="uid://dipnlo560hkc8" path="res://Oponenci/stinky.tscn" id="9_hxhq3"]
-[ext_resource type="FontFile" uid="uid://dssw4rhmx0p2s" path="res://menu/PerfectDOSVGA437.ttf" id="10_bndcm"]
+[ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="10_bndcm"]
 
 [node name="Misja1" type="Node2D"]
 
@@ -102,6 +102,8 @@ position = Vector2(6477, -132)
 
 [node name="Oponent_dystans2" parent="." instance=ExtResource("7_y6i1i")]
 position = Vector2(6329, -112)
+<<<<<<< HEAD
+=======
 
 [node name="Oponent_wrecz2" parent="." instance=ExtResource("8_1p7er")]
 position = Vector2(4704, -317)
@@ -117,3 +119,4 @@ position = Vector2(6641, -131)
 
 [node name="Oponent_dystans3" parent="." instance=ExtResource("7_y6i1i")]
 position = Vector2(7555, -400)
+>>>>>>> 2ca12af276993ff2b0cf090f4fafc6077e96cb57

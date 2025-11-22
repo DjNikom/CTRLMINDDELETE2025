@@ -9,7 +9,8 @@ var atakDelay
 const ATAKDELAY = 5
 var predkosc
 const PREDKOSC = 5
-var gracz
+
+@onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
 
 func _ready() -> void:
 	ifGraczIn = false
@@ -31,7 +32,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _process(_delta: float) -> void:
 	if atakDelay <= 0:
 		if ifGraczIn:
-			gracz.dealDamage(atak)
+			gracz.take_damage(ATAK)
 			atakDelay = ATAKDELAY
 	
 func _physics_process(delta: float) -> void:
