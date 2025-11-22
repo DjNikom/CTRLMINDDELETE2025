@@ -9,7 +9,7 @@ var atakDelay
 const ATAKDELAY = 5
 var predkosc
 const PREDKOSC = 5
-var graczhp
+var gracz
 
 @onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
 
@@ -23,6 +23,7 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz: 
 		ifGraczIn = true
+		gracz = body
 	
 	
 func _on_area_2d_body_exited(body: Node2D) -> void:
