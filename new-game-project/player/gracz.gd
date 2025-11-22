@@ -18,6 +18,10 @@ func bariera_knockback():
 	velocity = Vector2(200, -400)
 	$AnimatedSprite2D.play("fall")
 
+func gameover():
+	pauza = true
+	MenedzerScen.przejscie("res://menu/GameOver.tscn")
+
 func _physics_process(delta: float) -> void:
 	if pauza: return
 	

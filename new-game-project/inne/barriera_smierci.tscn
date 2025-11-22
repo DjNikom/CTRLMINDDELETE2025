@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://wog180qw2vl4"]
+
+[ext_resource type="Script" uid="uid://6hexoaivd6l8" path="res://inne/barriera_smierci.gd" id="1_8u22x"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pkbjw"]
+
+[node name="BarrieraSmierci" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_8u22x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_pkbjw")
