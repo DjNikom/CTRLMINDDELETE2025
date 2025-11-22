@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://f276qfl5ln0t"]
+[gd_scene load_steps=9 format=4 uid="uid://f276qfl5ln0t"]
 
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_1p7er"]
 [ext_resource type="TileSet" uid="uid://dke6mgb6ci7u5" path="res://assety/teren_misja1.tres" id="2_y6i1i"]
 [ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_bx54q"]
 [ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="4_qnoqu"]
 [ext_resource type="PackedScene" uid="uid://wog180qw2vl4" path="res://inne/barriera_smierci.tscn" id="6_bx54q"]
+[ext_resource type="PackedScene" uid="uid://bb85un1lpvuei" path="res://Oponenci/oponent_dystans.tscn" id="7_y6i1i"]
+[ext_resource type="PackedScene" uid="uid://cswovm0b2ah4t" path="res://Oponenci/oponent_wrecz.tscn" id="8_1p7er"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="8_hxhq3"]
 
 [node name="Misja1" type="Node2D"]
@@ -29,6 +31,7 @@ texture = ExtResource("1_1p7er")
 
 [node name="Beacon" parent="." instance=ExtResource("3_bx54q")]
 position = Vector2(7808, -471)
+cel = "res://sceny/misja2.tscn"
 
 [node name="BeaconSektret" parent="." instance=ExtResource("3_bx54q")]
 position = Vector2(7936, -537)
@@ -55,3 +58,9 @@ collision_enabled = false
 
 [node name="BarrieraSmierci" parent="." instance=ExtResource("6_bx54q")]
 position = Vector2(0, 160)
+
+[node name="Oponent_dystans" parent="." instance=ExtResource("7_y6i1i")]
+position = Vector2(2981, -206)
+
+[node name="Oponent_wrecz" parent="." instance=ExtResource("8_1p7er")]
+position = Vector2(4090, -194)

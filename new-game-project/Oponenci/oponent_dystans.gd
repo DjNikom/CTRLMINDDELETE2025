@@ -5,9 +5,9 @@ var ifGraczIn
 var hp
 const HP = 100
 var melatak
-const MELATAK = 1
+const MELATAK = 25
 var atak
-const ATAK = 5
+const ATAK = 20
 var atakDelay
 const ATAKDELAY = 15
 var dystansDelay
@@ -16,6 +16,8 @@ var predkosc
 const PREDKOSC = 5
 var graczhp = 0
 var pocisk = preload("res://Oponenci/pocisk.tscn")
+
+@onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
 
 func _ready() -> void:
 	ifGraczIn = false
@@ -41,6 +43,7 @@ func _process(_delta: float) -> void:
 			graczhp -= atak
 			atakDelay = ATAKDELAY
 	if dystansDelay <= 0:
+		if gracz.position.distance_to(position) > 512: return
 		instantiate_bullet()
 		dystansDelay = DYSTANSDELAY
 	

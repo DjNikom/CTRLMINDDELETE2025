@@ -15,7 +15,7 @@ var funkcje: Array[Callable] = [
 ]
 
 func graj():
-	MenedzerScen.przejscie("res://sceny/mapa_start.tscn")
+	MenedzerScen.przejscie("res://sceny/misja1.tscn")
 
 func wyjdz():
 	MenedzerScen.wyjdz()

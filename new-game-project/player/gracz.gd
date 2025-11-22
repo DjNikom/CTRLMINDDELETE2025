@@ -40,10 +40,10 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.stop()
 			$AnimatedSprite2D.frame = 1
 		# Handle jump.
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		if Input.is_action_just_pressed("player_jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 			$AudioStreamPlayer2D2.play()
-		elif Input.is_action_just_pressed("ui_accept") and !djumped:
+		elif Input.is_action_just_pressed("player_jump") and !djumped:
 			djumped = true
 			if $CPUParticles2D.emitting:
 				$CPUParticles2D.emmiting = false
@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
-		var direction := Input.get_axis("ui_left", "ui_right")
+		var direction := Input.get_axis("player_left", "player_right")
 		if direction:
 			if not $AnimatedSprite2D.is_playing():
 				$AnimatedSprite2D.play("default")
@@ -77,14 +77,21 @@ signal died
 
 func take_damage(amount: int):
 	current_health -= amount
-	if current_health < 0:
+	
+	bezwladny = 30
+	velocity = Vector2(100, -200)
+	$AnimatedSprite2D.play("fall")
+	
+	emit_signal("health_changed", current_health)
+	print(current_health)
+	if current_health <= 0:
 		current_health = 0
-		emit_signal("health_changed", current_health)
-		if current_health == 0:
-			emit_signal("died")
+		gameover()
+		emit_signal("died")
 
 func heal(amount: int):
 	current_health += amount
+	
 	if current_health > max_health:
 		current_health = max_health
 	emit_signal("health_changed", current_health)
