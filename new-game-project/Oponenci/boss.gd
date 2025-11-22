@@ -7,13 +7,13 @@ const HP = 1000
 var melatak
 const MELATAK = 15
 var atak
-const ATAK = 25
+const ATAK = 15
 var atakDelay
-const ATAKDELAY = 4
+const ATAKDELAY = 10
 var predkosc
 const PREDKOSC = 20
-const NMBROFBULLETS = 6
-const CZASMIEDZYBULLETS = 0.5
+const NMBROFBULLETS = 5
+const CZASMIEDZYBULLETS = 0.75
 var gracz
 var pocisk = preload("res://Oponenci/BossPocisk.tscn")
 var x
@@ -42,6 +42,11 @@ func _process(_delta: float) -> void:
 		else: 
 			atak_masowy()	
 		atakDelay = ATAKDELAY
+	#KUBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAA!!!,albo Michał
+	#Wstwić tu co sięstanie po śmierci bosa
+	
+	if hp <= 0:
+		queue_free()
 	
 	
 func _physics_process(delta: float) -> void:

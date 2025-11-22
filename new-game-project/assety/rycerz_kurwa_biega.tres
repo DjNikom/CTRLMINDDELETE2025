@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://4ha77mkrepql"]
 
-[ext_resource type="Texture2D" uid="uid://dwht11ckmsp2r" path="res://assety/rycerz kurwa biega.png" id="1_j1mui"]
-[ext_resource type="Texture2D" uid="uid://bc2erypfgauhx" path="res://assety/rycerz_jezu_spada.png" id="2_ptyj0"]
+[ext_resource type="Texture2D" uid="uid://dfw7jpfljed7m" path="res://assety/rycerz kurwa biega.png" id="1_j1mui"]
+[ext_resource type="Texture2D" uid="uid://bwbujrbbdopmu" path="res://assety/rycerz_jezu_spada.png" id="2_ptyj0"]
 [ext_resource type="Texture2D" uid="uid://clt56rhr2hljq" path="res://assety/JA_PIERDOLE_RYCERZ_WALI3.png" id="3_jyogb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afprn"]
