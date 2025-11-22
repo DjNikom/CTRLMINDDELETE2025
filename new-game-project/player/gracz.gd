@@ -6,9 +6,11 @@ const JUMP_VELOCITY = -400.0
 var djumped = false
 var bezwladny: int = 0
 var pauza = false
-var current_health = 100
 
+var current_health = 100
 var max_health = 100
+
+var puncc = 0
 
 func _ready() -> void:
 	$AnimatedSprite2D.frame = 1
@@ -51,8 +53,9 @@ func _physics_process(delta: float) -> void:
 			$AudioStreamPlayer2D.play()
 			velocity.y = JUMP_VELOCITY
 
-		if Input.is_action_just_pressed("player_atk1"):
+		if Input.is_action_just_pressed("player_atk1") && !puncc:
 			var oponenci: Array[Node] = get_tree().get_nodes_in_group("oponenci")
+			puncc = 8
 			for o in oponenci:
 				if !o is Node2D: continue
 				var oponent: Node2D = o
@@ -77,6 +80,14 @@ func _physics_process(delta: float) -> void:
 		self.collision_mask &= ~2
 	else:
 		self.collision_mask |= 2
+
+	if puncc > 0:
+		$AnimatedSprite2D.play("puncc")
+		puncc -= 1
+	elif $AnimatedSprite2D.animation == "puncc":
+		$AnimatedSprite2D.animation = "default"
+		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.frame = 1
 
 	move_and_slide()
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://clt56rhr2hljq"
+path="res://.godot/imported/JA_PIERDOLE_RYCERZ_WALI3.png-9e3a5cf9e3ca3d0d301754d83b364932.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/JA_PIERDOLE_RYCERZ_WALI3.png"
+dest_files=["res://.godot/imported/JA_PIERDOLE_RYCERZ_WALI3.png-9e3a5cf9e3ca3d0d301754d83b364932.ctex"]
 
 [params]
 
