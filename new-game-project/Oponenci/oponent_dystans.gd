@@ -1,21 +1,23 @@
-extends Node2D
 class_name OppDyst
+extends Node2D
 
 var ifGraczIn
 var hp
 const HP = 100
 var melatak
-const MELATAK = 1
+const MELATAK = 25
 var atak
-const ATAK = 5
+const ATAK = 20
 var atakDelay
 const ATAKDELAY = 15
 var dystansDelay
-const DYSTANSDELAY = 10
+const DYSTANSDELAY = 3
 var predkosc
 const PREDKOSC = 5
-var graczhp = 0
+var gracz
 var pocisk = preload("res://Oponenci/pocisk.tscn")
+
+@onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
 
 func _ready() -> void:
 	ifGraczIn = false
@@ -29,6 +31,8 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz: 
 		ifGraczIn = true
+		gracz = body
+		
 	
 	
 func _on_area_2d_body_exited(body: Node2D) -> void:
@@ -38,9 +42,10 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _process(_delta: float) -> void:
 	if atakDelay <= 0:
 		if ifGraczIn:
-			graczhp -= atak
+			gracz.dealDamage(atak)
 			atakDelay = ATAKDELAY
 	if dystansDelay <= 0:
+		if gracz.position.distance_to(position) > 512: return
 		instantiate_bullet()
 		dystansDelay = DYSTANSDELAY
 	

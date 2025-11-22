@@ -1,13 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=9 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
 [ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
 [ext_resource type="Texture2D" uid="uid://bclk8ye1g2xvg" path="res://assety/poof jump.png" id="3_f1x1k"]
 [ext_resource type="AudioStream" uid="uid://b5ystmhps8vw6" path="res://assety/jump.ogg" id="4_f1x1k"]
 [ext_resource type="AudioStream" uid="uid://c7orpjpg4a3v4" path="res://assety/auntitled.ogg" id="5_nhorx"]
+[ext_resource type="PackedScene" path="res://inne/HealthBar.tscn" id="6_dhets"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhets"]
-size = Vector2(31, 64)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhets"]
+radius = 13.0
+height = 64.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dhets"]
 particles_animation = true
@@ -21,7 +23,7 @@ collision_mask = 7
 script = ExtResource("1_pprsy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_dhets")
+shape = SubResource("CapsuleShape2D_dhets")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["gracz"]]
 sprite_frames = ExtResource("2_pprsy")
@@ -51,3 +53,5 @@ stream = ExtResource("4_f1x1k")
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_nhorx")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_dhets")]

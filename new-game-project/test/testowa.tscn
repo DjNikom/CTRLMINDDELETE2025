@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="1_jold6"]
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_x51p7"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="2_vanjc"]
-[ext_resource type="PackedScene" path="res://inne/bariera.tscn" id="3_5qd04"]
+[ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="3_5qd04"]
 [ext_resource type="PackedScene" uid="uid://bb85un1lpvuei" path="res://Oponenci/oponent_dystans.tscn" id="5_x51p7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y245x"]
