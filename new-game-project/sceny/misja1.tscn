@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://f276qfl5ln0t"]
+[gd_scene load_steps=11 format=4 uid="uid://f276qfl5ln0t"]
 
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_1p7er"]
 [ext_resource type="TileSet" uid="uid://dke6mgb6ci7u5" path="res://assety/teren_misja1.tres" id="2_y6i1i"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cswovm0b2ah4t" path="res://Oponenci/oponent_wrecz.tscn" id="8_1p7er"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="8_hxhq3"]
 [ext_resource type="PackedScene" uid="uid://dipnlo560hkc8" path="res://Oponenci/stinky.tscn" id="9_hxhq3"]
+[ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="10_bndcm"]
 
 [node name="Misja1" type="Node2D"]
 
@@ -74,3 +75,30 @@ position = Vector2(6477, -132)
 
 [node name="Oponent_dystans2" parent="." instance=ExtResource("7_y6i1i")]
 position = Vector2(6329, -112)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 307.0
+offset_top = -228.0
+offset_right = 577.0
+offset_bottom = -204.0
+theme_override_fonts/font = ExtResource("10_bndcm")
+theme_override_font_sizes/font_size = 24
+text = "Skok dwukrotny z 'Z'"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -172.0
+offset_top = -153.0
+offset_right = -10.0
+offset_bottom = -129.0
+theme_override_fonts/font = ExtResource("10_bndcm")
+theme_override_font_sizes/font_size = 24
+text = "Lewo i prawo"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 2762.0
+offset_top = -254.0
+offset_right = 3168.0
+offset_bottom = -230.0
+theme_override_fonts/font = ExtResource("10_bndcm")
+theme_override_font_sizes/font_size = 24
+text = "Wcisnij 'X' przy przeciwnikach"
