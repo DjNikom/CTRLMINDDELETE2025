@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://bengtq8vg2tt1"
+path="res://.godot/imported/FreeButtons.png-a4fa6178ac8ed44de154d7164aa2d1d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/FreeButtons.png"
+dest_files=["res://.godot/imported/FreeButtons.png-a4fa6178ac8ed44de154d7164aa2d1d0.ctex"]
 
 [params]
 

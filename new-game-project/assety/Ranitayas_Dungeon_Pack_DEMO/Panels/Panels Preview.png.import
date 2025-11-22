@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://du7piw5xq0dvm"
+path="res://.godot/imported/Panels Preview.png-f3c1f53b4b43301cf4074ca27f4e066c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Panels/Panels Preview.png"
+dest_files=["res://.godot/imported/Panels Preview.png-f3c1f53b4b43301cf4074ca27f4e066c.ctex"]
 
 [params]
 

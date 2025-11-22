@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://3tdbnhjy760b"
+path="res://.godot/imported/Barrel Hit Animation Sheet.png-695090cef514fd44167f15a32ee96372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Explosive Barrel/Barrel Hit Animation Sheet.png"
+dest_files=["res://.godot/imported/Barrel Hit Animation Sheet.png-695090cef514fd44167f15a32ee96372.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://xk0h5uf07ujv"
+path="res://.godot/imported/Walk animation.png-7f027f72a229d69020190fdc43762a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Skeleton/Front sheets/Walk animation.png"
+dest_files=["res://.godot/imported/Walk animation.png-7f027f72a229d69020190fdc43762a1e.ctex"]
 
 [params]
 

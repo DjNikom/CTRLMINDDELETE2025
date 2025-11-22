@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://dbstxnh8nfi4y"
+path="res://.godot/imported/Fire off Animation Sheet.png-330f61516fc9da56fd430ebcd1c5070a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Fire Trap/Fire off Animation Sheet.png"
+dest_files=["res://.godot/imported/Fire off Animation Sheet.png-330f61516fc9da56fd430ebcd1c5070a.ctex"]
 
 [params]
 

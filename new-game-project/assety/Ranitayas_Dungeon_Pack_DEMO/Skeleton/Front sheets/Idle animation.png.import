@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://5qpnro7jy37p"
+path="res://.godot/imported/Idle animation.png-1eb58bbe3c3617f38e67c8b61054b444.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Skeleton/Front sheets/Idle animation.png"
+dest_files=["res://.godot/imported/Idle animation.png-1eb58bbe3c3617f38e67c8b61054b444.ctex"]
 
 [params]
 

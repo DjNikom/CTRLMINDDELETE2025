@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://75il85en3dku"
+path="res://.godot/imported/Fire coming out Sheet.png-5ea96d318905cfab57558ae32aa41528.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Fire Trap/Fire coming out Sheet.png"
+dest_files=["res://.godot/imported/Fire coming out Sheet.png-5ea96d318905cfab57558ae32aa41528.ctex"]
 
 [params]
 

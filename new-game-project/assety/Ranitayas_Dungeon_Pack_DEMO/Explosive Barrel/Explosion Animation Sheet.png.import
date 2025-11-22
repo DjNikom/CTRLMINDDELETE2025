@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://dfxv3fn4gj4ud"
+path="res://.godot/imported/Explosion Animation Sheet.png-7c402358dd976909f9d1df84e5eb010a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Explosive Barrel/Explosion Animation Sheet.png"
+dest_files=["res://.godot/imported/Explosion Animation Sheet.png-7c402358dd976909f9d1df84e5eb010a.ctex"]
 
 [params]
 

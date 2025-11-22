@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://y54ywudx0qql"
+path="res://.godot/imported/Closed Wooden door.png-df370a3b51c68aba190a2edc094175b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Wooden door/Closed Wooden door.png"
+dest_files=["res://.godot/imported/Closed Wooden door.png-df370a3b51c68aba190a2edc094175b1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://dw71m3ddv0qoh"
+path="res://.godot/imported/Medieval_props_free.png-62f522e9506fef54e73efc2580d21a7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Medieval_props_free.png"
+dest_files=["res://.godot/imported/Medieval_props_free.png-62f522e9506fef54e73efc2580d21a7d.ctex"]
 
 [params]
 

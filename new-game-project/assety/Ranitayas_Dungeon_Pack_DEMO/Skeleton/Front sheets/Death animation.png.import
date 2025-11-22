@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6skd3yqymflw"
-path="res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"
+uid="uid://ddta0aovuniht"
+path="res://.godot/imported/Death animation.png-90766b3b9a53086adca8ea9f9cc6e8bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assety/Tiles.png"
-dest_files=["res://.godot/imported/Tiles.png-25a089d57f8df14c988101d25d779028.ctex"]
+source_file="res://assety/Ranitayas_Dungeon_Pack_DEMO/Skeleton/Front sheets/Death animation.png"
+dest_files=["res://.godot/imported/Death animation.png-90766b3b9a53086adca8ea9f9cc6e8bf.ctex"]
 
 [params]
 
