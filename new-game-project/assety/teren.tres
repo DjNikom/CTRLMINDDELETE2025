@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://g7co3cfgf4ja" path="res://assety/kamien1.png" id="3_8rgba"]
 [ext_resource type="Texture2D" uid="uid://cygfeginib4kc" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="4_8rgba"]
 [ext_resource type="Texture2D" uid="uid://cinndn8m275p4" path="res://assety/trawa_semi.png" id="4_12ia2"]
-[ext_resource type="Texture2D" uid="uid://byqnq5xomnvp8" path="res://assety/Ranitayas_Dungeon_Pack_DEMO/Tileset/tileset-export.png" id="6_0dusu"]
-[ext_resource type="Texture2D" uid="uid://diooevtwn5mab" path="res://assety/Medieval_tiles_free_2.0.png" id="7_lkwcb"]
-[ext_resource type="Texture2D" uid="uid://oambyo7mfsbk" path="res://assety/Medieval_props_free.png" id="8_xh35h"]
+[ext_resource type="Texture2D" uid="uid://cbkb2fhi1pm8o" path="res://assety/Ranitayas_Dungeon_Pack_DEMO/Tileset/tileset-export.png" id="6_0dusu"]
+[ext_resource type="Texture2D" uid="uid://cfghxm7jlwqhp" path="res://assety/Medieval_tiles_free_2.0.png" id="7_lkwcb"]
+[ext_resource type="Texture2D" uid="uid://dw71m3ddv0qoh" path="res://assety/Medieval_props_free.png" id="8_xh35h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12ia2"]
 texture = ExtResource("1_3xvya")

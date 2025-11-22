@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://exdlfstmeumn"]
+[gd_scene load_steps=15 format=4 uid="uid://exdlfstmeumn"]
 
 [ext_resource type="Texture2D" uid="uid://wctie00o1ego" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Background/GrassLand_Background_1.png" id="1_ia2ro"]
 [ext_resource type="Texture2D" uid="uid://cygfeginib4kc" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="1_ogbpy"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dipnlo560hkc8" path="res://Oponenci/stinky.tscn" id="9_7tcph"]
 [ext_resource type="PackedScene" path="res://Oponenci/oponent_kabum.tscn" id="10_ijxrv"]
 [ext_resource type="PackedScene" uid="uid://bb85un1lpvuei" path="res://Oponenci/oponent_dystans.tscn" id="11_3ak3e"]
+[ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="12_7tcph"]
 [ext_resource type="PackedScene" uid="uid://cswovm0b2ah4t" path="res://Oponenci/oponent_wrecz.tscn" id="12_e62nt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46ryr"]
@@ -218,3 +219,7 @@ position = Vector2(581, -142)
 
 [node name="stinky6" parent="." instance=ExtResource("9_7tcph")]
 position = Vector2(624, -221)
+
+[node name="Beacon" parent="." instance=ExtResource("12_7tcph")]
+position = Vector2(4434, -224)
+cel = "res://sceny/bossfight1.tscn"

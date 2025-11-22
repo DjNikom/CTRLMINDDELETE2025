@@ -26,7 +26,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		queue_free()
 	
 
-@onready var gracz = get_tree().get_nodes_in_group("Gracz")[0]
+
 const SPEED = 0.2
 const JUMP_VELOCITY = -300.0
 var direction
