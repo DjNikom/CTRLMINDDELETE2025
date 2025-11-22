@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://df8rw0gslvqvj"]
 
 [ext_resource type="Script" uid="uid://b0b2dt2qwiwj7" path="res://menu/game_over.gd" id="1_y5cpp"]
-[ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="2_5dm6p"]
-[ext_resource type="AudioStream" uid="uid://souxvg3tpebh" path="res://assety/gameover.ogg" id="3_m32jl"]
+[ext_resource type="FontFile" uid="uid://dssw4rhmx0p2s" path="res://menu/PerfectDOSVGA437.ttf" id="2_5dm6p"]
+[ext_resource type="AudioStream" uid="uid://c1he2fhgallkj" path="res://assety/gameover.ogg" id="3_m32jl"]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_y5cpp")

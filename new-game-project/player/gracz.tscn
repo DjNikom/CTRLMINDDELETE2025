@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=10 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
 [ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
-[ext_resource type="Texture2D" uid="uid://bclk8ye1g2xvg" path="res://assety/poof jump.png" id="3_f1x1k"]
-[ext_resource type="AudioStream" uid="uid://b5ystmhps8vw6" path="res://assety/jump.ogg" id="4_f1x1k"]
-[ext_resource type="AudioStream" uid="uid://c7orpjpg4a3v4" path="res://assety/auntitled.ogg" id="5_nhorx"]
+[ext_resource type="Texture2D" uid="uid://bdxjp0dntk2m8" path="res://assety/poof jump.png" id="3_f1x1k"]
+[ext_resource type="AudioStream" uid="uid://dtsk1x1sqki8b" path="res://assety/jump.ogg" id="4_f1x1k"]
+[ext_resource type="AudioStream" uid="uid://c8of4xwwws4kg" path="res://assety/auntitled.ogg" id="5_nhorx"]
 [ext_resource type="PackedScene" path="res://inne/HealthBar.tscn" id="6_dhets"]
+[ext_resource type="AudioStream" uid="uid://bp3xlxbyxsurc" path="res://menu/snd2.ogg" id="7_jyh54"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhets"]
 radius = 13.0
@@ -55,3 +56,6 @@ stream = ExtResource("4_f1x1k")
 stream = ExtResource("5_nhorx")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("6_dhets")]
+
+[node name="DzwiekHeal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jyh54")

@@ -16,6 +16,7 @@ var puncc = 0
 func _ready() -> void:
 	$AnimatedSprite2D.frame = 1
 	current_health = 100
+	MenedzerScen.ostatnia = get_tree().current_scene.scene_file_path
 
 func bariera_knockback():
 	bezwladny = 60
@@ -24,6 +25,7 @@ func bariera_knockback():
 
 func gameover():
 	pauza = true
+	current_health = max_health
 	MenedzerScen.przejscie("res://menu/GameOver.tscn")
 
 func _physics_process(delta: float) -> void:
@@ -115,6 +117,8 @@ func take_damage(amount: int):
 
 func heal(amount: int):
 	current_health += amount
+	
+	get_node("DzwiekHeal").play()
 	
 	if current_health > max_health:
 		current_health = max_health

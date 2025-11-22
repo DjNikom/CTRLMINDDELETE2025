@@ -33,6 +33,8 @@ var velocity = Vector2(0, 0)
 var active = false
 
 func _physics_process(_delta: float) -> void:
+	if !is_instance_valid(gracz): return
+	
 	if !active:
 		if gracz.position.distance_to(position) < 512: active = true
 		return

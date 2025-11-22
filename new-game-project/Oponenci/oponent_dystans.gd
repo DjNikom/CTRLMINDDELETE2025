@@ -42,6 +42,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		ifGraczIn = false
 		
 func _process(_delta: float) -> void:
+	if !is_instance_valid(gracz): return
+	
 	if atakDelay <= 0:
 		if ifGraczIn:
 			gracz.dealDamage(atak)

@@ -4,6 +4,8 @@ var glosnosc: int = 255
 var glosnosc_cel: int = glosnosc
 var glosnosc_delta: int = 1
 
+var ostatnia: String = "res://menu/ScenaMenu.tscn"
+
 func ustawGlosnosc(g: float):
 	AudioServer.set_bus_volume_linear(
 		AudioServer.get_bus_index("Master"),
