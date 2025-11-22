@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://b5ydou1ehm7y1"]
+[gd_scene load_steps=14 format=4 uid="uid://yhryn33voyqb"]
 
-[ext_resource type="TileSet" uid="uid://d3ckldwfsmwc" path="res://assety/budulce.tres" id="1_n2pwe"]
+[ext_resource type="TileSet" uid="uid://cokedl0a5b5ht" path="res://assety/budulce.tres" id="1_n2pwe"]
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_ocw1x"]
 [ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="1_q2dks"]
-[ext_resource type="Script" uid="uid://dimym7k7tvtq7" path="res://sceny/dekor.gd" id="3_jnc1k"]
+[ext_resource type="Script" path="res://sceny/dekor.gd" id="3_jnc1k"]
+[ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_ln5bh"]
 [ext_resource type="SpriteFrames" uid="uid://dfn2bft0kc7do" path="res://assety/fire.tres" id="4_dg0qr"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="5_dg0qr"]
 [ext_resource type="Texture2D" uid="uid://7antvv60ngwb" path="res://assety/Untitled.png" id="6_6uva7"]
@@ -63,6 +64,10 @@ shape = SubResource("RectangleShape2D_dg0qr")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="budynek"]
 position = Vector2(622, -249)
 shape = SubResource("RectangleShape2D_dg0qr")
+
+[node name="Beacon" parent="." instance=ExtResource("3_ln5bh")]
+position = Vector2(1148, -55)
+cel = "res://sceny/misja1.tscn"
 
 [node name="Ziemia" type="StaticBody2D" parent="."]
 position = Vector2(2, -7)
