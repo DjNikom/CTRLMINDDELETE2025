@@ -208,4 +208,13 @@ position = Vector2(497, -15)
 position = Vector2(871, -188)
 
 [node name="stinky3" parent="." instance=ExtResource("9_7tcph")]
-position = Vector2(773, -144)
+position = Vector2(712, -244)
+
+[node name="stinky4" parent="." instance=ExtResource("9_7tcph")]
+position = Vector2(729, -158)
+
+[node name="stinky5" parent="." instance=ExtResource("9_7tcph")]
+position = Vector2(581, -142)
+
+[node name="stinky6" parent="." instance=ExtResource("9_7tcph")]
+position = Vector2(624, -221)
