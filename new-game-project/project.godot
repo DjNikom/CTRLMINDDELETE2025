@@ -20,6 +20,7 @@ config/icon="uid://cwy7jqc81xnrr"
 [autoload]
 
 MenedzerScen="*res://MenedzerScen.gd"
+Dialog="*res://dialog.gd"
 
 [display]
 
