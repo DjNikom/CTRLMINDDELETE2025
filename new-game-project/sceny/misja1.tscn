@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://f276qfl5ln0t"]
+[gd_scene load_steps=10 format=4 uid="uid://f276qfl5ln0t"]
 
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_1p7er"]
 [ext_resource type="TileSet" uid="uid://dke6mgb6ci7u5" path="res://assety/teren_misja1.tres" id="2_y6i1i"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bb85un1lpvuei" path="res://Oponenci/oponent_dystans.tscn" id="7_y6i1i"]
 [ext_resource type="PackedScene" uid="uid://cswovm0b2ah4t" path="res://Oponenci/oponent_wrecz.tscn" id="8_1p7er"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="8_hxhq3"]
+[ext_resource type="PackedScene" uid="uid://dipnlo560hkc8" path="res://Oponenci/stinky.tscn" id="9_hxhq3"]
 
 [node name="Misja1" type="Node2D"]
 
@@ -64,3 +65,6 @@ position = Vector2(2981, -206)
 
 [node name="Oponent_wrecz" parent="." instance=ExtResource("8_1p7er")]
 position = Vector2(4090, -194)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("9_hxhq3")]
+position = Vector2(6275, -132)

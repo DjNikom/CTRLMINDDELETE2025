@@ -51,6 +51,14 @@ func _physics_process(delta: float) -> void:
 			$AudioStreamPlayer2D.play()
 			velocity.y = JUMP_VELOCITY
 
+		if Input.is_action_just_pressed("player_atk1"):
+			var oponenci: Array[Node] = get_tree().get_nodes_in_group("oponenci")
+			for o in oponenci:
+				if !o is Node2D: continue
+				var oponent: Node2D = o
+				if oponent.position.distance_to(self.position) > 128: continue
+				oponent.queue_free()
+
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var direction := Input.get_axis("player_left", "player_right")
@@ -77,7 +85,6 @@ signal died
 
 func take_damage(amount: int):
 	current_health -= amount
-	
 	bezwladny = 30
 	velocity = Vector2(100, -200)
 	$AnimatedSprite2D.play("fall")
@@ -85,7 +92,6 @@ func take_damage(amount: int):
 	emit_signal("health_changed", current_health)
 	print(current_health)
 	if current_health <= 0:
-		current_health = 0
 		gameover()
 		emit_signal("died")
 
