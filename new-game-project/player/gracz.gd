@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var djumped = false
 var bezwladny: int = 0
+var pauza = false
 
 var current_health = 100
 var max_health = 100
@@ -18,6 +19,8 @@ func bariera_knockback():
 	$AnimatedSprite2D.play("fall")
 
 func _physics_process(delta: float) -> void:
+	if pauza: return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -34,6 +37,7 @@ func _physics_process(delta: float) -> void:
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
+			$AudioStreamPlayer2D.play()
 		elif Input.is_action_just_pressed("ui_accept") and !djumped:
 			djumped = true
 			if $CPUParticles2D.emitting:
