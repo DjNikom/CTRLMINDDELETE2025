@@ -1,11 +1,13 @@
 class_name Bariera
 extends Area2D
 
+@export var flip: bool = false
+
 func wszedl(kto: Node2D):
 	if !kto is Gracz:
 		return
 	var gracz: Gracz = kto
-	gracz.bariera_knockback()
+	gracz.bariera_knockback(flip)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,4 +21,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	var enemies = get_tree().get_nodes_in_group("oponenci").size()
+	if enemies: return
+	queue_free()

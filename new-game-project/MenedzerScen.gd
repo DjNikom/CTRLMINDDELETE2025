@@ -37,6 +37,9 @@ func przejscie(scena: String):
 
 func animacja_koniec(scena: String):
 	get_tree().current_scene.queue_free()
+	
+	await get_tree().create_timer(0.1).timeout
+	
 	var s = load(scena).instantiate()
 	get_tree().root.add_child(s)
 	get_tree().current_scene = s

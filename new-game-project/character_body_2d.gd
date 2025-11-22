@@ -12,7 +12,7 @@ func damage():
 func _physics_process(delta: float) -> void:
 	if !is_instance_valid(gracz): return
 	if gracz.position.distance_to(position) > 512: return
-	
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

@@ -12,13 +12,14 @@ size = Vector2(42, 44)
 script = ExtResource("1_wrmic")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, -16)
+position = Vector2(-2, -10)
 texture = ExtResource("2_55115")
 
 [node name="Area2D" type="Area2D" parent="."]
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_4iwtl")
 debug_color = Color(0.9920365, 0, 0.26378384, 0.41960785)
 

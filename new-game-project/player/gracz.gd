@@ -16,11 +16,10 @@ var puncc = 0
 func _ready() -> void:
 	$AnimatedSprite2D.frame = 1
 	current_health = 100
-	MenedzerScen.ostatnia = get_tree().current_scene.scene_file_path
 
-func bariera_knockback():
+func bariera_knockback(flip):
 	bezwladny = 60
-	velocity = Vector2(200, -400)
+	velocity = Vector2(200 if !flip else -200, -400)
 	$AnimatedSprite2D.play("fall")
 
 func gameover():

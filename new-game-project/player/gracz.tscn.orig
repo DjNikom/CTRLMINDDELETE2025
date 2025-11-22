@@ -1,0 +1,136 @@
+<<<<<<< HEAD
+[gd_scene load_steps=10 format=3 uid="uid://deg1tljeykp3j"]
+=======
+[gd_scene load_steps=12 format=3 uid="uid://deg1tljeykp3j"]
+>>>>>>> c14f933fdab8add4d85905b28d0973921f2b6394
+
+[ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
+[ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
+[ext_resource type="Texture2D" uid="uid://bdxjp0dntk2m8" path="res://assety/poof jump.png" id="3_f1x1k"]
+[ext_resource type="AudioStream" uid="uid://dtsk1x1sqki8b" path="res://assety/jump.ogg" id="4_f1x1k"]
+[ext_resource type="AudioStream" uid="uid://c8of4xwwws4kg" path="res://assety/auntitled.ogg" id="5_nhorx"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" path="res://inne/HealthBar.tscn" id="6_dhets"]
+[ext_resource type="AudioStream" uid="uid://bp3xlxbyxsurc" path="res://menu/snd2.ogg" id="7_jyh54"]
+=======
+[ext_resource type="PackedScene" uid="uid://pnu8ivtsq20c" path="res://inne/HealthBar.tscn" id="6_dhets"]
+[ext_resource type="Script" uid="uid://vacx5fnuufyk" path="res://player/uinv.gd" id="7_6m4k8"]
+[ext_resource type="Texture2D" uid="uid://w3cr4fgrr6nn" path="res://assety/JA RYCERZ WALI2.png" id="8_vkhqt"]
+[ext_resource type="Theme" uid="uid://bue88crbgo2p5" path="res://assety/dialoguetheme.tres" id="9_fmd7i"]
+>>>>>>> c14f933fdab8add4d85905b28d0973921f2b6394
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhets"]
+radius = 13.0
+height = 64.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dhets"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[node name="Gracz" type="CharacterBody2D" groups=["Gracz"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_pprsy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dhets")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["gracz"]]
+sprite_frames = ExtResource("2_pprsy")
+frame = 1
+frame_progress = 0.37987107
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_dhets")
+position = Vector2(0, 26)
+emitting = false
+amount = 2
+texture = ExtResource("3_f1x1k")
+lifetime = 0.28
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 6.45
+anim_speed_min = 2.0
+anim_speed_max = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f1x1k")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_nhorx")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_dhets")]
+
+<<<<<<< HEAD
+[node name="DzwiekHeal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jyh54")
+=======
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("7_6m4k8")
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+offset_left = 14.0
+offset_top = 54.0
+offset_right = 476.0
+offset_bottom = 425.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 57.0
+offset_bottom = 56.0
+scale = Vector2(2.4235399, 3.6647751)
+
+[node name="TextureRect" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 25.0
+offset_right = 103.0
+offset_bottom = 153.0
+texture = ExtResource("8_vkhqt")
+
+[node name="Label" type="Label" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 24.0
+offset_right = 308.0
+offset_bottom = 76.0
+theme = ExtResource("9_fmd7i")
+theme_override_font_sizes/font_size = 51
+text = "RYCERZ"
+
+[node name="HP" type="Label" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 76.0
+offset_right = 230.0
+offset_bottom = 100.0
+theme = ExtResource("9_fmd7i")
+text = "XXX% HP"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 173.0
+offset_right = 442.0
+offset_bottom = 349.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ColorRect/ScrollContainer"]
+layout_mode = 2
+
+[node name="Sword" type="Label" parent="UI/ColorRect/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("9_fmd7i")
+text = "* MIECZ"
+>>>>>>> c14f933fdab8add4d85905b28d0973921f2b6394

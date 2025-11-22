@@ -1,4 +1,3 @@
-class_name OppDyst
 extends Node2D
 
 var ifGraczIn

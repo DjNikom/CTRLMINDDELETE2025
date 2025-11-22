@@ -3,7 +3,7 @@ extends Node2D
 var ifGraczIn
 var hp
 var atak
-const ATAK = 20
+const ATAK = 5
 var atakDelay
 const ATAKDELAY = 5
 var predkosc

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://db4sw8c71mry" path="res://assety/animate barrier.gd" id="1_1di43"]
 [ext_resource type="SpriteFrames" uid="uid://vjkocbqgpl6g" path="res://assety/bariera_anim.tres" id="2_1pgi5"]
-[ext_resource type="AudioStream" uid="uid://rtye2o1wai3r" path="res://assety/barrieridle.ogg" id="3_1pgi5"]
+[ext_resource type="AudioStream" uid="uid://db5l2hgv7um8q" path="res://assety/barrieridle.ogg" id="3_1pgi5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_prs83"]
 normal = Vector2(1, 0)
