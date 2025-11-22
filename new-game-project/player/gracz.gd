@@ -77,11 +77,13 @@ signal died
 
 func take_damage(amount: int):
 	current_health -= amount
-	if current_health < 0:
+	print(current_health)
+	if current_health <= 0:
 		current_health = 0
 		emit_signal("health_changed", current_health)
 		if current_health == 0:
 			emit_signal("died")
+			gameover()
 
 func heal(amount: int):
 	current_health += amount
