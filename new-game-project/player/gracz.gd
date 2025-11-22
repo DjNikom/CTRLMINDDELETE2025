@@ -15,6 +15,7 @@ func _ready() -> void:
 func bariera_knockback():
 	bezwladny = 60
 	velocity = Vector2(200, -400)
+	$AnimatedSprite2D.play("fall")
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,10 +26,11 @@ func _physics_process(delta: float) -> void:
 
 	if bezwladny:
 		bezwladny -= 1
-		if $AnimatedSprite2D.is_playing():
-				$AnimatedSprite2D.stop()
-				$AnimatedSprite2D.frame = 1
 	else:
+		if $AnimatedSprite2D.animation == "fall":
+			$AnimatedSprite2D.animation = "default"
+			$AnimatedSprite2D.stop()
+			$AnimatedSprite2D.frame = 1
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
