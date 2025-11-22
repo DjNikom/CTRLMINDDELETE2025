@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://bcs6u0cucvnmw"]
+
+[ext_resource type="Script" uid="uid://c6t0hq1ygui1k" path="res://sceny/static_body_2d.gd" id="1_mjcty"]
+[ext_resource type="Texture2D" uid="uid://btogq2jblhf0x" path="res://assety/beam.png" id="2_1bsgi"]
+[ext_resource type="Texture2D" uid="uid://dj84t3861y2dh" path="res://assety/beacon.png" id="3_vktfo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxhq3"]
+atlas = ExtResource("2_1bsgi")
+region = Rect2(0, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bndcm"]
+atlas = ExtResource("2_1bsgi")
+region = Rect2(16, 0, 16, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsari"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxhq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bndcm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5c7q"]
+atlas = ExtResource("3_vktfo")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgy2u"]
+atlas = ExtResource("3_vktfo")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hcwi"]
+atlas = ExtResource("3_vktfo")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl2uc"]
+atlas = ExtResource("3_vktfo")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a66wr"]
+atlas = ExtResource("3_vktfo")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kehan"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5c7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgy2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hcwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl2uc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a66wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl2uc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjcty"]
+size = Vector2(18, 80)
+
+[node name="Beacon" type="Area2D"]
+script = ExtResource("1_mjcty")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_dsari")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kehan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_mjcty")

@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://4ha77mkrepql"]
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://4ha77mkrepql"]
 
 [ext_resource type="Texture2D" uid="uid://ewrreabq8trp" path="res://assety/rycerz kurwa biega.png" id="1_j1mui"]
+[ext_resource type="Texture2D" uid="uid://cmd6q1u43g45m" path="res://assety/rycerz_jezu_spada.png" id="2_ptyj0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptyj0"]
 atlas = ExtResource("1_j1mui")
@@ -36,4 +37,12 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ptyj0")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
 }]
