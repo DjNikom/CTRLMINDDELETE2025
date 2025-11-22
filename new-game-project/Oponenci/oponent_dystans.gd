@@ -14,7 +14,6 @@ var dystansDelay
 const DYSTANSDELAY = 3
 var predkosc
 const PREDKOSC = 5
-var gracz
 var pocisk = preload("res://Oponenci/pocisk.tscn")
 
 @onready var gracz: Gracz = get_tree().get_nodes_in_group("Gracz")[0]
