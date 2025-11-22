@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://deg1tljeykp3j"]
+[gd_scene load_steps=12 format=3 uid="uid://deg1tljeykp3j"]
 
 [ext_resource type="Script" uid="uid://b23f8kdg0ombn" path="res://player/gracz.gd" id="1_pprsy"]
 [ext_resource type="SpriteFrames" uid="uid://4ha77mkrepql" path="res://assety/rycerz_kurwa_biega.tres" id="2_pprsy"]
@@ -6,6 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://dtsk1x1sqki8b" path="res://assety/jump.ogg" id="4_f1x1k"]
 [ext_resource type="AudioStream" uid="uid://c8of4xwwws4kg" path="res://assety/auntitled.ogg" id="5_nhorx"]
 [ext_resource type="PackedScene" uid="uid://pnu8ivtsq20c" path="res://inne/HealthBar.tscn" id="6_dhets"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Script" uid="uid://vacx5fnuufyk" path="res://player/uinv.gd" id="7_6m4k8"]
+[ext_resource type="Texture2D" uid="uid://w3cr4fgrr6nn" path="res://assety/JA RYCERZ WALI2.png" id="8_vkhqt"]
+[ext_resource type="Theme" uid="uid://bue88crbgo2p5" path="res://assety/dialoguetheme.tres" id="9_fmd7i"]
+>>>>>>> 7ee21cef213f6519d6aee65f8f7dbbaf4e560eed
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhets"]
 radius = 13.0
@@ -55,3 +61,65 @@ stream = ExtResource("4_f1x1k")
 stream = ExtResource("5_nhorx")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("6_dhets")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("7_6m4k8")
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+offset_left = 14.0
+offset_top = 54.0
+offset_right = 476.0
+offset_bottom = 425.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 57.0
+offset_bottom = 56.0
+scale = Vector2(2.4235399, 3.6647751)
+
+[node name="TextureRect" type="TextureRect" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 25.0
+offset_right = 103.0
+offset_bottom = 153.0
+texture = ExtResource("8_vkhqt")
+
+[node name="Label" type="Label" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 24.0
+offset_right = 308.0
+offset_bottom = 76.0
+theme = ExtResource("9_fmd7i")
+theme_override_font_sizes/font_size = 51
+text = "RYCERZ"
+
+[node name="HP" type="Label" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 76.0
+offset_right = 230.0
+offset_bottom = 100.0
+theme = ExtResource("9_fmd7i")
+text = "XXX% HP"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/ColorRect"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 173.0
+offset_right = 442.0
+offset_bottom = 349.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ColorRect/ScrollContainer"]
+layout_mode = 2
+
+[node name="Sword" type="Label" parent="UI/ColorRect/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("9_fmd7i")
+text = "* MIECZ"

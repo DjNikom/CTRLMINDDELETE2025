@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://0xx8wfp6sgis"]
 
-[ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="1_4mixd"]
+[ext_resource type="FontFile" uid="uid://dssw4rhmx0p2s" path="res://menu/PerfectDOSVGA437.ttf" id="1_4mixd"]
 [ext_resource type="Script" uid="uid://cnqvwjb0xouwi" path="res://menu/scena_menu.gd" id="1_yart0"]
 [ext_resource type="PackedScene" uid="uid://cl30787seehq2" path="res://menu/menu_item.tscn" id="3_764qr"]
-[ext_resource type="Texture2D" uid="uid://x7ljshsdq0jl" path="res://menu/logo.png" id="4_78fmy"]
-[ext_resource type="AudioStream" uid="uid://ces3u5eobqp7y" path="res://menu/tytul_intro.ogg" id="4_u0hy4"]
-[ext_resource type="AudioStream" uid="uid://bp30dmorvfcty" path="res://menu/tytul_loop.ogg" id="5_78fmy"]
-[ext_resource type="AudioStream" uid="uid://d1vedxyg6gxi2" path="res://menu/snd1.ogg" id="5_totii"]
-[ext_resource type="AudioStream" uid="uid://crftiu0akmsid" path="res://menu/snd2.ogg" id="6_qputn"]
+[ext_resource type="Texture2D" uid="uid://btv5rkrxt5mxx" path="res://menu/logo.png" id="4_78fmy"]
+[ext_resource type="AudioStream" uid="uid://bl55xxpvg7cqh" path="res://menu/tytul_intro.ogg" id="4_u0hy4"]
+[ext_resource type="AudioStream" uid="uid://cmjwyvgjgfou" path="res://menu/tytul_loop.ogg" id="5_78fmy"]
+[ext_resource type="AudioStream" uid="uid://cu3aw4j1dohca" path="res://menu/snd1.ogg" id="5_totii"]
+[ext_resource type="AudioStream" uid="uid://bp3xlxbyxsurc" path="res://menu/snd2.ogg" id="6_qputn"]
 
 [sub_resource type="Animation" id="Animation_u0hy4"]
 resource_name = "Intro"
@@ -122,8 +122,11 @@ _data = {
 script = ExtResource("1_yart0")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -1102.0
+offset_top = -655.0
+offset_right = 50.0
+offset_bottom = -7.0
+scale = Vector2(2.8788054, 3.516595)
 color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" parent="."]
@@ -134,7 +137,8 @@ offset_bottom = 324.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("1_4mixd")
 theme_override_font_sizes/normal_font_size = 64
-text = "Tytuł gry tutaj"
+text = "Po najmniejszej
+linii oporu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -180,3 +184,6 @@ autoplay = true
 [node name="MuzykaPetla" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_78fmy")
 parameters/looping = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 322)
