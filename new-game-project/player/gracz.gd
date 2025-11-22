@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 
 		if Input.is_action_just_pressed("player_atk1") && !puncc:
 			var oponenci: Array[Node] = get_tree().get_nodes_in_group("oponenci")
-			puncc = 8
+			puncc = 15
 			for o in oponenci:
 				if !o is Node2D: continue
 				var oponent: Node2D = o
