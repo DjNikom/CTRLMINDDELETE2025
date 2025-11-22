@@ -1,5 +1,5 @@
-extends Node2D
 class_name OppDyst
+extends Node2D
 
 var ifGraczIn
 var hp
@@ -11,7 +11,7 @@ const ATAK = 5
 var atakDelay
 const ATAKDELAY = 15
 var dystansDelay
-const DYSTANSDELAY = 10
+const DYSTANSDELAY = 3
 var predkosc
 const PREDKOSC = 5
 var graczhp = 0
