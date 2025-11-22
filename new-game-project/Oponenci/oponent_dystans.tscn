@@ -20,6 +20,8 @@ shape = SubResource("RectangleShape2D_4iwtl")
 debug_color = Color(0.9920365, 0, 0.26378384, 0.41960785)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 5
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("RectangleShape2D_bhl4w")

@@ -25,6 +25,10 @@ MenedzerScen="*res://MenedzerScen.gd"
 
 window/stretch/scale_mode="integer"
 
+[global_group]
+
+Gracz=""
+
 [input]
 
 ui_accept={

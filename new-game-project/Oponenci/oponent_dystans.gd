@@ -1,4 +1,5 @@
 extends Node2D
+class_name OppDyst
 
 var ifGraczIn
 var hp
@@ -41,7 +42,6 @@ func _process(_delta: float) -> void:
 			atakDelay = ATAKDELAY
 	if dystansDelay <= 0:
 		instantiate_bullet()
-		print("EloElo320")
 		dystansDelay = DYSTANSDELAY
 	
 	
@@ -56,6 +56,3 @@ func _physics_process(delta: float) -> void:
 func instantiate_bullet():
 	var instance = pocisk.instantiate()
 	add_child(instance)
-	
-		
-		
