@@ -7,8 +7,7 @@ func gracz_wszedl(gracz: Node2D):
 	if !gracz is Gracz:
 		return
 	
-	gracz.bezwladny = 1000
-	gracz.velocity = Vector2(0, 0)
+	gracz.pauza = true
 	
 	MenedzerScen.przejscie(cel)
 
