@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-[gd_scene load_steps=8 format=4 uid="uid://285ghohhjtrb"]
+[gd_scene load_steps=8 format=4 uid="uid://75abvg3pnder"]
 
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_y6ug6"]
 [ext_resource type="Texture2D" uid="uid://c251uoiikiabf" path="res://assety/IMG_4789(1).png" id="2_p5kma"]
-[ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="2_y6ug6"]
+[ext_resource type="TileSet" uid="uid://dssy0ii5l38u3" path="res://assety/teren.tres" id="2_y6ug6"]
 [ext_resource type="PackedScene" uid="uid://bcs6u0cucvnmw" path="res://inne/beacon.tscn" id="3_p5kma"]
 [ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="4_dp7ak"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="5_t0xml"]
 [ext_resource type="PackedScene" uid="uid://wog180qw2vl4" path="res://inne/barriera_smierci.tscn" id="6_xkcyx"]
-=======
-[gd_scene load_steps=0 format=3 uid="uid://285ghohhjtrb"]
->>>>>>> a0e90ec4741aa91ddb1a7011b677dea4c700dba9
 
 [node name="Misja2" type="Node2D"]
 
