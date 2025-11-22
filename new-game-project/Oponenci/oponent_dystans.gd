@@ -14,7 +14,7 @@ var dystansDelay
 const DYSTANSDELAY = 3
 var predkosc
 const PREDKOSC = 5
-var graczhp = 0
+var gracz
 var pocisk = preload("res://Oponenci/pocisk.tscn")
 
 func _ready() -> void:
@@ -29,6 +29,8 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz: 
 		ifGraczIn = true
+		gracz = body
+		
 	
 	
 func _on_area_2d_body_exited(body: Node2D) -> void:
@@ -38,7 +40,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _process(_delta: float) -> void:
 	if atakDelay <= 0:
 		if ifGraczIn:
-			graczhp -= atak
+			gracz.dealDamage(atak)
 			atakDelay = ATAKDELAY
 	if dystansDelay <= 0:
 		instantiate_bullet()
