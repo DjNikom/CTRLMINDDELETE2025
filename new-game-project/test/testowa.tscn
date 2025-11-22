@@ -3,8 +3,8 @@
 [ext_resource type="TileSet" uid="uid://chslyd8yits5j" path="res://assety/teren.tres" id="1_jold6"]
 [ext_resource type="Texture2D" uid="uid://ct50negpir3n0" path="res://assety/niebo.png" id="1_x51p7"]
 [ext_resource type="PackedScene" uid="uid://deg1tljeykp3j" path="res://player/gracz.tscn" id="2_vanjc"]
-[ext_resource type="PackedScene" path="res://inne/bariera.tscn" id="3_5qd04"]
-[ext_resource type="PackedScene" uid="uid://bb85un1lpvuei" path="res://Oponenci/oponent_dystans.tscn" id="5_x51p7"]
+[ext_resource type="PackedScene" uid="uid://b1332m07npk7r" path="res://inne/bariera.tscn" id="3_5qd04"]
+[ext_resource type="PackedScene" uid="uid://dc48emqm5xyko" path="res://Oponenci/boss.tscn" id="5_x51p7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y245x"]
 distance = -7.0
@@ -49,8 +49,8 @@ shape = SubResource("RectangleShape2D_vanjc")
 [node name="Bariera" parent="." instance=ExtResource("3_5qd04")]
 position = Vector2(-446, -95)
 
-[node name="Oponent_dystans" parent="." instance=ExtResource("5_x51p7")]
-position = Vector2(272, -161)
-
 [node name="Gracz" parent="." instance=ExtResource("2_vanjc")]
 position = Vector2(25, -164)
+
+[node name="Boss" parent="." instance=ExtResource("5_x51p7")]
+position = Vector2(686, -42)

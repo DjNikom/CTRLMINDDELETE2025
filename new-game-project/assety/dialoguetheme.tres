@@ -1,7 +1,15 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bue88crbgo2p5"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bue88crbgo2p5"]
 
 [ext_resource type="FontFile" uid="uid://cnl12u1ug4ky3" path="res://menu/PerfectDOSVGA437.ttf" id="1_bbm5a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbm5a"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83o4w"]
+bg_color = Color(1, 0, 0, 1)
 
 [resource]
 Label/font_sizes/font_size = 24
 Label/fonts/font = ExtResource("1_bbm5a")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_bbm5a")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_83o4w")
