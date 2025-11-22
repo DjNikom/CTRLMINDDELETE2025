@@ -6,12 +6,13 @@ const JUMP_VELOCITY = -400.0
 var djumped = false
 var bezwladny: int = 0
 var pauza = false
+var current_health
 
-var current_health = 100
 var max_health = 100
 
 func _ready() -> void:
 	$AnimatedSprite2D.frame = 1
+	current_health = 100
 
 func bariera_knockback():
 	bezwladny = 60
@@ -87,3 +88,9 @@ func heal(amount: int):
 	if current_health > max_health:
 		current_health = max_health
 	emit_signal("health_changed", current_health)
+	
+func dealDamage(amaunt: int):
+	current_health -= amaunt 
+	
+func get_pozycja():
+	return self.global_position
