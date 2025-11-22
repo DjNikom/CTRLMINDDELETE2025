@@ -2,7 +2,6 @@ extends Node2D
 
 var ifGraczIn
 var hp
-const HP = 100
 var atak
 const ATAK = 20
 var atakDelay
@@ -17,7 +16,12 @@ func _ready() -> void:
 	atakDelay = ATAKDELAY
 	predkosc = PREDKOSC
 	atak = ATAK
-	hp = HP
+	hp = 2
+
+func damage():
+	hp -= 1
+	if hp: return
+	queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Gracz: 

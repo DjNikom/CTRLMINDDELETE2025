@@ -1,6 +1,15 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dke6mgb6ci7u5"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://dke6mgb6ci7u5"]
 
-[ext_resource type="Texture2D" uid="uid://dovn3hp2p4152" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="1_ve26n"]
+[ext_resource type="Texture2D" uid="uid://cygfeginib4kc" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="1_ve26n"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ve26n"]
+tile_data = PackedInt32Array(0, 262144, 7, 1, 327680, 7, 2, 327680, 7, 3, 393216, 7)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_w12wo"]
+tile_data = PackedInt32Array(0, 262144, 7, 1, 327680, 7, 2, 393216, 7)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_6smjg"]
+tile_data = PackedInt32Array(0, 262144, 7, 1, 327680, 7, 2, 327680, 7, 3, 327680, 7, 4, 393216, 7)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w12wo"]
 texture = ExtResource("1_ve26n")
@@ -150,3 +159,6 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_w12wo")
+pattern_0 = SubResource("TileMapPattern_ve26n")
+pattern_1 = SubResource("TileMapPattern_w12wo")
+pattern_2 = SubResource("TileMapPattern_6smjg")

@@ -7,7 +7,7 @@ const HP = 100
 var melatak
 const MELATAK = 25
 var atak
-const ATAK = 20
+const ATAK = 15
 var atakDelay
 const ATAKDELAY = 15
 var dystansDelay
@@ -25,6 +25,9 @@ func _ready() -> void:
 	melatak = MELATAK
 	hp = HP
 	dystansDelay = 0
+	
+func damage():
+	queue_free()
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
