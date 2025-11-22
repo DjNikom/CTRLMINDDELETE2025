@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -400.0
 var djumped = false
 var bezwladny: int = 0
 var pauza = false
-var current_health
+var current_health = 100
 
 var max_health = 100
 
