@@ -13,7 +13,7 @@ var funkcje: Array[Callable] = [
 ]
 
 func graj():
-	get_tree().change_scene_to_file("res://sceny/mapa_start.tscn")
+	MenedzerScen.przejscie("res://sceny/mapa_start.tscn")
 
 func wyjdz():
 	get_tree().quit()
@@ -36,8 +36,8 @@ func _ready() -> void:
 	muzykaIntro.connect("finished", muzyka_zapetlij)
 
 func _input(event: InputEvent) -> void:
-	if !gotowy:
-		return
+	#if !gotowy:
+	#	return
 	
 	if event.is_action_pressed("ui_left") || event.is_action_pressed("ui_right"):
 		pozycja += 1
