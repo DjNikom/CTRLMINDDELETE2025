@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmvv0sm13mg3s"]
+[gd_scene load_steps=7 format=3 uid="uid://dc48emqm5xyko"]
 
 [ext_resource type="Script" uid="uid://cxk8n7kl0krdn" path="res://Oponenci/boss.gd" id="1_r88yc"]
 [ext_resource type="Texture2D" uid="uid://c7pfxpioqslku" path="res://assety/threeformsPJ21.png" id="2_m0i53"]
@@ -19,10 +19,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4iwtl"]
-size = Vector2(80, 78)
+size = Vector2(79, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhl4w"]
-size = Vector2(179, 168)
+size = Vector2(160, 160)
 
 [node name="Boss" type="Node2D"]
 script = ExtResource("1_r88yc")
@@ -41,7 +41,6 @@ debug_color = Color(0.9920365, 0, 0.26378384, 0.41960785)
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(1.5, 11)
 shape = SubResource("RectangleShape2D_bhl4w")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

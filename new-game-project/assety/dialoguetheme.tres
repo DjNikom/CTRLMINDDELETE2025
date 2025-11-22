@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://bue88crbgo2p5"]
 
-[ext_resource type="FontFile" uid="uid://dssw4rhmx0p2s" path="res://menu/PerfectDOSVGA437.ttf" id="1_bbm5a"]
+[ext_resource type="FontFile" uid="uid://xevkjkw53ya1" path="res://menu/PerfectDOSVGA437.ttf" id="1_bbm5a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbm5a"]
 bg_color = Color(0, 0, 0, 1)

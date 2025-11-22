@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://sixlqomlgvbn"]
 
 [ext_resource type="Script" uid="uid://hww375id8205" path="res://Oponenci/BossPocisk.gd" id="1_diubm"]
-[ext_resource type="Texture2D" uid="uid://blac0ry5ja13f" path="res://assety/fireball.png" id="2_g564k"]
+[ext_resource type="Texture2D" uid="uid://ctnbbe85etgah" path="res://assety/fireball.png" id="2_g564k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xk53w"]
 radius = 12.165525
