@@ -36,8 +36,8 @@ func _ready() -> void:
 	muzykaIntro.connect("finished", muzyka_zapetlij)
 
 func _input(event: InputEvent) -> void:
-	#if !gotowy:
-	#	return
+	if !gotowy:
+		return
 	
 	if event.is_action_pressed("ui_left") || event.is_action_pressed("ui_right"):
 		pozycja += 1

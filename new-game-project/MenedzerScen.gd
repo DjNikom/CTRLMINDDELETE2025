@@ -15,6 +15,7 @@ func animacja_koniec(scena: String):
 	get_tree().current_scene.queue_free()
 	var s = load(scena).instantiate()
 	get_tree().root.add_child(s)
+	get_tree().current_scene = s
 	
 	var p = preload("res://inne/Przejscie.tscn").instantiate()
 	s.add_child(p)

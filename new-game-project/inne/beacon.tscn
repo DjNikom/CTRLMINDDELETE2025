@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bcs6u0cucvnmw"]
 
-[ext_resource type="Script" uid="uid://c6t0hq1ygui1k" path="res://sceny/static_body_2d.gd" id="1_mjcty"]
+[ext_resource type="Script" uid="uid://c6t0hq1ygui1k" path="res://inne/beacon.gd" id="1_mjcty"]
 [ext_resource type="Texture2D" uid="uid://btogq2jblhf0x" path="res://assety/beam.png" id="2_1bsgi"]
 [ext_resource type="Texture2D" uid="uid://dj84t3861y2dh" path="res://assety/beacon.png" id="3_vktfo"]
 
