@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://df1bdb7fd7pkx"]
+
+[ext_resource type="Script" uid="uid://bclhhqnl4nkfl" path="res://character_body_2d.gd" id="1_55wl1"]
+[ext_resource type="Texture2D" uid="uid://cypmqqcs7c326" path="res://assety/azmbimbemsie.png" id="2_0qn36"]
+[ext_resource type="Script" uid="uid://domrvvyie07h2" path="res://Oponenci/area_2d.gd" id="2_xm6qi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xm6qi"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55wl1"]
+size = Vector2(70, 70)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_55wl1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xm6qi")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_xm6qi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_55wl1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0qn36")

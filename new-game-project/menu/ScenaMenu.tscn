@@ -122,8 +122,11 @@ _data = {
 script = ExtResource("1_yart0")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -1102.0
+offset_top = -655.0
+offset_right = 50.0
+offset_bottom = -7.0
+scale = Vector2(2.8788054, 3.516595)
 color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" parent="."]
@@ -180,3 +183,6 @@ autoplay = true
 [node name="MuzykaPetla" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_78fmy")
 parameters/looping = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 322)
