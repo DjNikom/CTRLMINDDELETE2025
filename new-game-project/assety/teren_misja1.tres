@@ -1,6 +1,6 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dke6mgb6ci7u5"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ctnbi0lxw5840"]
 
-[ext_resource type="Texture2D" uid="uid://dovn3hp2p4152" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="1_ve26n"]
+[ext_resource type="Texture2D" uid="uid://cygfeginib4kc" path="res://assety/Multi_Platformer_Tileset_Free/GrassLand/Terrain/Grassland_Terrain_Tileset.png" id="1_ve26n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w12wo"]
 texture = ExtResource("1_ve26n")
