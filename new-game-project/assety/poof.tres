@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://co6uoe8fac34j"]
+
+[ext_resource type="Texture2D" uid="uid://bclk8ye1g2xvg" path="res://assety/poof jump.png" id="1_6ucq8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fatep"]
+atlas = ExtResource("1_6ucq8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfpey"]
+atlas = ExtResource("1_6ucq8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vtry"]
+atlas = ExtResource("1_6ucq8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b388"]
+atlas = ExtResource("1_6ucq8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghich"]
+atlas = ExtResource("1_6ucq8")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fatep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfpey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vtry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b388")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghich")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
